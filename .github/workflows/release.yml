@@ -1,0 +1,41 @@
+name: Release
+run-name: '🚀 [Release] ${{ github.event.head_commit.message }} (${{ github.ref }})'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: '🚀 Release'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      id-token: write
+      pull-requests: write
+
+    steps:
+      - name: '🚚 Checkout branch'
+        uses: 'actions/checkout@v4'
+
+      - name: '📦 Cache bun artifacts'
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
+
+      - name: '🌑 Setup moonrepo'
+        uses: 'moonrepo/setup-toolchain@v0'
+
+      - name: '🌕 Release with changesets'
+        uses: changesets/action@v1
+        with:
+          title: 'Publish new version'
+          commit: 'release: publish new version'
+          version: 'moon @:release-version'
+          publish: 'moon @:release-publish'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_LIBRARY_TOKEN }}
