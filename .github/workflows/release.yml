@@ -20,6 +20,14 @@ jobs:
       - name: '🚚 Checkout branch'
         uses: 'actions/checkout@v4'
 
+      - name: '📦 Cache moon artifacts'
+        uses: actions/cache@v4
+        with:
+          path: .moon/cache
+          key: ${{ runner.os }}-moon-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-moon-
+
       - name: '📦 Cache bun artifacts'
         uses: actions/cache@v4
         with:
@@ -28,6 +36,9 @@ jobs:
 
       - name: '🌑 Setup moonrepo'
         uses: 'moonrepo/setup-toolchain@v0'
+
+      - name: '🌗 Build with moonrepo'
+        run: 'moon :build'
 
       - name: '🌕 Release with changesets'
         uses: changesets/action@v1
