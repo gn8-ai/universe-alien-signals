@@ -1,0 +1,46 @@
+# Documents: https://moonrepo.dev/docs/config/project
+
+id: '@'
+
+project:
+  name: 'Alien Signals Frontend Framework Integrations'
+  description: 'This repository enables the use of alien-signals with frontend frameworks.'
+
+workspace:
+  inheritedTasks:
+    include:
+      - 'exec'
+
+dependsOn:
+  - { id: '@packages-codebase/eslint', scope: 'development' }
+  - { id: '@packages-codebase/prettier', scope: 'development' }
+  - { id: '@packages-config/typescript', scope: 'development' }
+
+tasks:
+  ####################
+  ## Github Actions ##
+  ####################
+
+  github-actions:
+    command: 'act push --container-daemon-socket - --container-architecture linux/amd64 -j'
+    preset: 'server'
+
+  #############
+  ## Release ##
+  #############
+
+  release:
+    command: 'bunx changeset'
+    preset: 'server'
+
+  release-version:
+    command: 'bunx changeset version'
+    preset: 'server'
+
+  release-tag:
+    command: 'bunx changeset tag'
+    preset: 'server'
+
+  release-publish:
+    command: 'bunx changeset publish'
+    preset: 'server'

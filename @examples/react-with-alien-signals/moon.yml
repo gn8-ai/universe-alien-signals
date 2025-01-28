@@ -1,0 +1,53 @@
+id: '@examples/react-with-alien-signals'
+type: 'application'
+stack: 'frontend'
+
+project:
+  name: 'React with Alien Signals Example'
+  description: 'React with Alien Signals Example.'
+
+dependsOn:
+  - { id: '@libs/alien-signals-react' }
+  - { id: '@packages-codebase/eslint', scope: 'development' }
+  - { id: '@packages-codebase/prettier', scope: 'development' }
+  - { id: '@packages-config/typescript', scope: 'development' }
+
+tasks:
+  ###########$$$$$$
+  ## Development ##
+  ###########$$$$$$
+
+  dev:
+    command: 'vite dev'
+    preset: 'server'
+
+  ###########
+  ## Check ##
+  ###########
+
+  check:
+    deps:
+      - '@libs/alien-signals-react:build'
+  check-prettier:
+    deps:
+      - '@libs/alien-signals-react:build'
+  check-eslint:
+    deps:
+      - '@libs/alien-signals-react:build'
+  check-types:
+    deps:
+      - '@libs/alien-signals-react:build'
+
+  ############
+  ## Format ##
+  ############
+
+  format:
+    deps:
+      - '@libs/alien-signals-react:build'
+  format-prettier:
+    deps:
+      - '@libs/alien-signals-react:build'
+  format-eslint:
+    deps:
+      - '@libs/alien-signals-react:build'

@@ -1,0 +1,6 @@
+[test]
+preload = [
+  "./test/solid-jsx-plugin.ts",
+  "./test/happydom.ts",
+  "./test/testing-library.ts",
+]

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "auto",
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "checkJs": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true,
+    "noUncheckedSideEffectImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": false,
+    "sourceMap": true,
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "outDir": "${configDir}/.cache/types",
+    "paths": {
+      "~": ["${configDir}"],
+      "~/*": ["${configDir}/*"],
+      "@": ["${configDir}/src"],
+      "@/*": ["${configDir}/src/*"]
+    },
+    "types": ["@packages-config/typescript"]
+  },
+  "files": [],
+  "include": ["${configDir}/**/*"],
+  "exclude": [
+    "${configDir}/node_modules",
+    "${configDir}/dist",
+    "${configDir}/build",
+    "${configDir}/.*",
+    "${configDir}/**/@*"
+  ]
+}

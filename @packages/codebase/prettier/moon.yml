@@ -1,0 +1,11 @@
+id: '@packages-codebase/prettier'
+type: 'library'
+stack: 'unknown'
+
+project:
+  name: 'Prettier'
+  description: 'Prettier configuration.'
+
+dependsOn:
+  - { id: '@packages-config/typescript' }
+  - { id: '@packages-codebase/eslint', scope: 'development' }

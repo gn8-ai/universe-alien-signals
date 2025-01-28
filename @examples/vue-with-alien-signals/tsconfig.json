@@ -1,0 +1,20 @@
+{
+  "extends": "@packages-config/typescript/configs/vue.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM"]
+  },
+  "references": [
+    {
+      "path": "../../@libs/alien-signals-vue"
+    },
+    {
+      "path": "../../@packages/codebase/eslint"
+    },
+    {
+      "path": "../../@packages/codebase/prettier"
+    },
+    {
+      "path": "../../@packages/config/typescript"
+    }
+  ]
+}

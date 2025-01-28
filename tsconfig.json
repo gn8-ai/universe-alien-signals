@@ -1,0 +1,33 @@
+{
+  "extends": "@packages-config/typescript/configs/base.json",
+  "files": [],
+  "references": [
+    {
+      "path": "@examples/react-with-alien-signals"
+    },
+    {
+      "path": "@examples/solid-with-alien-signals"
+    },
+    {
+      "path": "@examples/vue-with-alien-signals"
+    },
+    {
+      "path": "@libs/alien-signals-react"
+    },
+    {
+      "path": "@libs/alien-signals-solid"
+    },
+    {
+      "path": "@libs/alien-signals-vue"
+    },
+    {
+      "path": "@packages/codebase/eslint"
+    },
+    {
+      "path": "@packages/codebase/prettier"
+    },
+    {
+      "path": "@packages/config/typescript"
+    }
+  ]
+}

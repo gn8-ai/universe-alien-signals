@@ -1,0 +1,90 @@
+# Documents: https://moonrepo.dev/docs/config/tasks
+
+taskOptions:
+  outputStyle: 'stream'
+  runInCI: false
+
+tasks:
+  ###############
+  ## Execution ##
+  ###############
+
+  exec:
+    type: 'run'
+    command: 'eval'
+    toolchain: 'system'
+
+  ###########
+  ## Check ##
+  ###########
+
+  check:
+    deps:
+      - 'check-prettier'
+      - 'check-eslint'
+      - 'check-types'
+
+  check-prettier:
+    command: 'prettier .'
+    args:
+      - '--check'
+      - '--cache'
+      - '--cache-location'
+      - '$workspaceRoot/.moon/cache/projects/$project/prettier'
+      - '--ignore-path'
+      - '$workspaceRoot/.gitignore'
+    options:
+      runInCI: true
+
+  check-eslint:
+    command: 'eslint .'
+    args:
+      - '--cache'
+      - '--cache-location'
+      - '$workspaceRoot/.moon/cache/projects/$project/eslint'
+    options:
+      runInCI: true
+
+  check-types:
+    command: 'tsc'
+    args:
+      - '--noEmit'
+      - '--skipLibCheck'
+      - '--checkJs'
+      - 'false'
+      - '--outDir'
+      - '$workspaceRoot/.moon/cache/projects/$project/types'
+    options:
+      runInCI: true
+
+  ############
+  ## Format ##
+  ############
+
+  format:
+    type: 'run'
+    deps:
+      - 'format-prettier'
+      - 'format-eslint'
+    options:
+      runDepsInParallel: false
+
+  format-prettier:
+    type: 'run'
+    command: 'prettier .'
+    args:
+      - '--write'
+      - '--cache'
+      - '--cache-location'
+      - '$workspaceRoot/.moon/cache/projects/$project/prettier'
+      - '--ignore-path'
+      - '$workspaceRoot/.gitignore'
+
+  format-eslint:
+    type: 'run'
+    command: 'eslint .'
+    args:
+      - '--fix'
+      - '--cache'
+      - '--cache-location'
+      - '$workspaceRoot/.moon/cache/projects/$project/eslint'

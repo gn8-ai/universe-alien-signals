@@ -1,0 +1,14 @@
+{
+  "extends": "@packages-config/typescript/configs/react.json",
+  "references": [
+    {
+      "path": "../../@packages/codebase/eslint"
+    },
+    {
+      "path": "../../@packages/codebase/prettier"
+    },
+    {
+      "path": "../../@packages/config/typescript"
+    }
+  ]
+}

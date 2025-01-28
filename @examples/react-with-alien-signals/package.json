@@ -1,0 +1,22 @@
+{
+  "name": "@examples/react-with-alien-signals",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@gn8/alien-signals-react": "workspace:*",
+    "alien-signals": "^1.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@packages-codebase/eslint": "workspace:*",
+    "@packages-codebase/prettier": "workspace:*",
+    "@packages-config/typescript": "workspace:*",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5"
+  }
+}

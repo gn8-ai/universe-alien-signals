@@ -1,0 +1,47 @@
+{
+  "name": "@gn8/alien-signals-react",
+  "description": "Alien Signals for React.",
+  "version": "0.0.0",
+  "private": false,
+  "publishConfig": {
+    "provenance": true
+  },
+  "license": "MIT",
+  "author": "junpei-8",
+  "homepage": "https://github.com/gn8-ai/universe-alien-signals/tree/main/@libs/alien-signals-react#readme",
+  "bugs": "https://github.com/gn8-ai/universe-alien-signals/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gn8-ai/universe-alien-signals.git",
+    "directory": "@libs/alien-signals-react"
+  },
+  "keywords": [
+    "alien-signals",
+    "signal",
+    "state",
+    "state manager",
+    "react"
+  ],
+  "type": "module",
+  "sideEffect": false,
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "alien-signals": ">=1.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@happy-dom/global-registrator": "^16.7.2",
+    "@packages-codebase/eslint": "workspace:*",
+    "@packages-codebase/prettier": "workspace:*",
+    "@packages-config/typescript": "workspace:*",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "tsup": "^8.3.6"
+  }
+}

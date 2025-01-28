@@ -1,0 +1,29 @@
+{
+  "name": "@packages-codebase/eslint",
+  "private": true,
+  "type": "module",
+  "sideEffect": false,
+  "exports": {
+    ".": "./src/configs/index.mjs",
+    "./*": "./src/*"
+  },
+  "dependencies": {
+    "@eslint/compat": "^1.2.4",
+    "@eslint/js": "^9.19.0",
+    "@packages-config/typescript": "workspace:*",
+    "@types/picomatch": "^3.0.1",
+    "@typescript-eslint/types": "^8.21.0",
+    "@typescript-eslint/parser": "^8.19.1",
+    "eslint": "^9.17.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.1",
+    "eslint-plugin-perfectionist": "^4.6.0",
+    "globals": "^15.14.0",
+    "picomatch": "^4.0.2",
+    "typescript-eslint": "^8.19.1"
+  },
+  "devDependencies": {
+    "@packages-codebase/prettier": "workspace:*"
+  }
+}

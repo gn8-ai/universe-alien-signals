@@ -1,0 +1,41 @@
+id: '@libs/alien-signals-solid'
+type: 'library'
+stack: 'frontend'
+
+project:
+  name: 'Alien Signals for Solid'
+  description: 'Alien Signals for Solid.'
+
+dependsOn:
+  - { id: '@packages-codebase/eslint', scope: 'development' }
+  - { id: '@packages-codebase/prettier', scope: 'development' }
+  - { id: '@packages-config/typescript', scope: 'development' }
+
+tasks:
+  ###########
+  ## Build ##
+  ###########
+
+  build:
+    command: 'tsup'
+    inputs:
+      - 'src/**/*'
+      - 'tsup.config.ts'
+      - 'tsconfig.build.json'
+    outputs:
+      - 'dist'
+    options:
+      runInCI: true
+
+  ###########
+  ## Tests ##
+  ###########
+
+  test:
+    command: 'bun test --conditions browser'
+    inputs:
+      - 'test/**/*'
+      - 'src/**/*.test.*'
+      - 'bunfig.toml'
+    options:
+      runInCI: true

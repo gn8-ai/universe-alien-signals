@@ -1,0 +1,30 @@
+# Environment variables
+.env*
+!.env*.example
+
+# Log files
+logs/
+*.log*
+
+# Build artifacts
+build/
+dist/
+
+# Cache artifacts
+.cache/
+
+# Base
+/_/
+
+# Templates
+!_templates/**
+
+# OS files
+.DS_Store
+
+# Node dependencies
+node_modules/
+
+# Moon
+.moon/cache/
+.moon/docker/

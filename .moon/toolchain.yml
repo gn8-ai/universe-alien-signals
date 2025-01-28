@@ -1,0 +1,12 @@
+# Documents: https://moonrepo.dev/docs/config/toolchain
+
+node:
+  packageManager: bun
+
+bun:
+  dependencyVersionFormat: workspace
+  syncProjectWorkspaceDependencies: true
+
+typescript:
+  syncProjectReferences: true
+  syncProjectReferencesToPaths: false

@@ -1,0 +1,24 @@
+{
+  "name": "@packages-codebase/prettier",
+  "private": true,
+  "type": "module",
+  "sideEffect": false,
+  "exports": {
+    ".": "./src/configs/index.mjs",
+    "./plugins": "./src/plugins/index.mjs",
+    "./utils": "./src/utils/index.mjs",
+    "./*": "./src/*"
+  },
+  "dependencies": {
+    "@fastify/deepmerge": "^2.0.1",
+    "@packages-config/typescript": "workspace:*",
+    "@types/bun": "^1.1.15",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-jsdoc": "^1.3.2",
+    "prettier-plugin-sh": "^0.14.0"
+  },
+  "devDependencies": {
+    "@packages-codebase/eslint": "workspace:*"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "never",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+
+  "explorer.sortOrderLexicographicOptions": "unicode",
+
+  "files.associations": {
+    ".prototools": "ini"
+  },
+
+  "material-icon-theme.folders.associations": {
+    "@apps": "app",
+    "@examples": "examples",
+    "@libs": "lib",
+    "@packages": "packages"
+  },
+  "material-icon-theme.files.associations": {
+    "*.type.ts": "typescript-def"
+  },
+
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+
+  "cSpell.userWords": []
+}

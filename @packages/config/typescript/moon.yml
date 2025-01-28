@@ -1,0 +1,11 @@
+id: '@packages-config/typescript'
+type: 'library'
+stack: 'unknown'
+
+project:
+  name: 'TypeScript'
+  description: 'TypeScript configuration.'
+
+dependsOn:
+  - { id: '@packages-codebase/eslint', scope: 'development' }
+  - { id: '@packages-codebase/prettier', scope: 'development' }

@@ -1,0 +1,19 @@
+{
+  "name": "@packages-config/typescript",
+  "private": true,
+  "type": "module",
+  "sideEffect": false,
+  "exports": {
+    ".": "./src/index.d.ts",
+    "./*": "./src/*"
+  },
+  "dependencies": {
+    "@total-typescript/ts-reset": "^0.6.1",
+    "type-fest": "^4.31.0",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@packages-codebase/eslint": "workspace:*",
+    "@packages-codebase/prettier": "workspace:*"
+  }
+}

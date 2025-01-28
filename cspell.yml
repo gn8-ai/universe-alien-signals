@@ -1,0 +1,45 @@
+$schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
+version: "0.2"
+ignorePaths:
+  - node_modules
+enabledLanguageIds:
+  - "*"
+words:
+  - abspath
+  - arrayify
+  - astro
+  - boolify
+  - bunfig
+  - bunx
+  - citty
+  - cjsx
+  - codeowners
+  - compat
+  - confbox
+  - ctsx
+  - deepmerge
+  - deno
+  - fastify
+  - happydom
+  - hardline
+  - junpei
+  - mjsx
+  - moonrepo
+  - mtsx
+  - nanostores
+  - nocheck
+  - polyrepo
+  - proto
+  - prototools
+  - registrator
+  - solidjs
+  - subrepo
+  - tsdoc
+  - TSES
+  - tsup
+  - typebox
+  - valibot
+  - vite
+  - vitepress
+  - vitest
+  - winget

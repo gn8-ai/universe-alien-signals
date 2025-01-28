@@ -1,0 +1,50 @@
+{
+  "name": "@gn8/alien-signals-vue",
+  "description": "Alien Signals for Vue.",
+  "version": "0.0.0",
+  "private": false,
+  "publishConfig": {
+    "provenance": true
+  },
+  "license": "MIT",
+  "author": "junpei-8",
+  "homepage": "https://github.com/gn8-ai/universe-alien-signals/tree/main/@libs/alien-signals-vue#readme",
+  "bugs": "https://github.com/gn8-ai/universe-alien-signals/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gn8-ai/universe-alien-signals.git",
+    "directory": "@libs/alien-signals-vue"
+  },
+  "keywords": [
+    "alien-signals",
+    "signal",
+    "state",
+    "state manager",
+    "vue"
+  ],
+  "type": "module",
+  "sideEffect": false,
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0",
+    "alien-signals": ">=1.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@happy-dom/global-registrator": "^16.7.2",
+    "@packages-codebase/eslint": "workspace:*",
+    "@packages-codebase/prettier": "workspace:*",
+    "@packages-config/typescript": "workspace:*",
+    "@solidjs/testing-library": "^0.8.10",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/vue": "^8.1.0",
+    "@vue/babel-plugin-jsx": "^1.2.5",
+    "tsup": "^8.3.6"
+  }
+}

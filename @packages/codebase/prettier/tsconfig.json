@@ -1,0 +1,14 @@
+{
+  "extends": "@packages-config/typescript/configs/base.json",
+  "compilerOptions": {
+    "types": ["@packages-config/typescript"]
+  },
+  "references": [
+    {
+      "path": "../../config/typescript"
+    },
+    {
+      "path": "../eslint"
+    }
+  ]
+}
