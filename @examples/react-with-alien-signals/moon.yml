@@ -3,8 +3,7 @@ type: 'application'
 stack: 'frontend'
 
 project:
-  name: 'React with Alien Signals Example'
-  description: 'React with Alien Signals Example.'
+  description: 'React with alien-signals example.'
 
 dependsOn:
   - { id: '@libs/alien-signals-react' }
@@ -25,9 +24,6 @@ tasks:
   ## Check ##
   ###########
 
-  check:
-    deps:
-      - '@libs/alien-signals-react:build'
   check-prettier:
     deps:
       - '@libs/alien-signals-react:build'
@@ -42,9 +38,6 @@ tasks:
   ## Format ##
   ############
 
-  format:
-    deps:
-      - '@libs/alien-signals-react:build'
   format-prettier:
     deps:
       - '@libs/alien-signals-react:build'

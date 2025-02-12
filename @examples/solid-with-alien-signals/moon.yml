@@ -3,8 +3,7 @@ type: 'application'
 stack: 'frontend'
 
 project:
-  name: 'Solid Alien Signals Example'
-  description: 'Solid Alien Signals Example.'
+  description: 'Solid with alien-signals example.'
 
 dependsOn:
   - { id: '@libs/alien-signals-solid' }
@@ -27,9 +26,6 @@ tasks:
   ## Check ##
   ###########
 
-  check:
-    deps:
-      - '@libs/alien-signals-solid:build'
   check-prettier:
     deps:
       - '@libs/alien-signals-solid:build'
@@ -44,9 +40,6 @@ tasks:
   ## Format ##
   ############
 
-  format:
-    deps:
-      - '@libs/alien-signals-solid:build'
   format-prettier:
     deps:
       - '@libs/alien-signals-solid:build'

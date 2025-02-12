@@ -3,8 +3,7 @@ type: 'application'
 stack: 'frontend'
 
 project:
-  name: 'Vue Alien Signals Example'
-  description: 'Vue Alien Signals Example.'
+  description: 'Vue with alien-signals example.'
 
 dependsOn:
   - { id: '@libs/alien-signals-vue' }
@@ -25,9 +24,6 @@ tasks:
   ## Check ##
   ###########
 
-  check:
-    deps:
-      - '@libs/alien-signals-vue:build'
   check-prettier:
     deps:
       - '@libs/alien-signals-vue:build'
@@ -42,9 +38,6 @@ tasks:
   ## Format ##
   ############
 
-  format:
-    deps:
-      - '@libs/alien-signals-vue:build'
   format-prettier:
     deps:
       - '@libs/alien-signals-vue:build'
