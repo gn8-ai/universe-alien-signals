@@ -135,7 +135,7 @@ The following features and support will be added sequentially:
 - [ ] Implementation of `@gn8/alien-signals-svelte`
 - [ ] SSR verification and support
 - [ ] Enhancement of test coverage
-- [ ] Creation of Astro framework usage examples
+- [x] Creation of Astro framework usage examples
 
 <br />
 

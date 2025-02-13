@@ -1,0 +1,25 @@
+{
+  "name": "@examples/astro-with-alien-signals",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@astrojs/react": "^4.2.0",
+    "@astrojs/solid-js": "^5.0.4",
+    "@astrojs/vue": "^5.0.6",
+    "@gn8/alien-signals-react": "workspace:*",
+    "@gn8/alien-signals-solid": "workspace:*",
+    "@gn8/alien-signals-vue": "workspace:*",
+    "alien-signals": "^1.0.3",
+    "astro": "^5.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "solid-js": "^1.9.4",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@packages-codebase/eslint": "workspace:*",
+    "@packages-codebase/prettier": "workspace:*",
+    "@packages-config/typescript": "workspace:*"
+  }
+}

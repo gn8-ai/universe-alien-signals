@@ -1,0 +1,26 @@
+---
+import ReactLogoSvg from '../_assets/react.svg';
+import Navigation from '../_components/Navigation.solid';
+import Layout from '../../layouts/Layout.astro';
+import ReactCounter from './_components/ReactCounter.react.tsx';
+---
+
+<Layout>
+  <div>
+    <a class="logo-link" href="https://react.dev" target="_blank">
+      <img class="logo react" alt="React logo" src={ReactLogoSvg.src} />
+    </a>
+  </div>
+  <h1>React</h1>
+  <Navigation />
+  <div class="card">
+    <ReactCounter client:load />
+    <p>
+      Edit <code>src/pages/react/index.astro</code> and save to test HMR
+    </p>
+  </div>
+  <p class="read-the-docs">Click on the React logo to learn more</p>
+  <p>
+    <a href="/">Back to Astro</a>
+  </p>
+</Layout>

@@ -1,0 +1,26 @@
+---
+import VueLogoSvg from '../_assets/vue.svg';
+import Navigation from '../_components/Navigation.solid';
+import Layout from '../../layouts/Layout.astro';
+import VueCounter from './_components/VueCounter.vue';
+---
+
+<Layout>
+  <div>
+    <a class="logo-link" href="https://vuejs.org" target="_blank">
+      <img class="logo vue" alt="Vue logo" src={VueLogoSvg.src} />
+    </a>
+  </div>
+  <h1>Vue</h1>
+  <Navigation />
+  <div class="card">
+    <VueCounter client:load />
+    <p>
+      Edit <code>src/pages/vue/index.astro</code> and save to test HMR
+    </p>
+  </div>
+  <p class="read-the-docs">Click on the Vue logo to learn more</p>
+  <p>
+    <a href="/">Back to Astro</a>
+  </p>
+</Layout>
