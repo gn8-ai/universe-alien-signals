@@ -35,7 +35,20 @@ export default typescriptEslint.config(
       /**
        * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/check-tag-names.md
        */
-      'jsdoc/check-tag-names': ['warn', { definedTags: ['remarks'] }],
+      'jsdoc/check-tag-names': [
+        'warn',
+        { definedTags: ['remarks', 'jsx', 'jsxImportSource'] },
+      ],
+
+      /**
+       * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-param.md
+       */
+      'jsdoc/require-param': ['warn', { exemptedBy: ['inheritdoc', 'jsx'] }],
+
+      /**
+       * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-returns.md
+       */
+      'jsdoc/require-returns': ['warn', { exemptedBy: ['inheritdoc', 'jsx'] }],
 
       /**
        * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-jsdoc.md
@@ -60,7 +73,7 @@ export default typescriptEslint.config(
             'ReturnStatement > ClassExpression',
             'ReturnStatement > FunctionExpression',
             'ReturnStatement > ArrowFunctionExpression',
-            'ExportDefaultDeclaration:not(:has(Identifier))',
+            'ExportDefaultDeclaration',
             'ExportNamedDeclaration:has(VariableDeclaration)',
             'ExportNamedDeclaration:has(ClassExpression)',
             'ExportNamedDeclaration:has(FunctionExpression)',
