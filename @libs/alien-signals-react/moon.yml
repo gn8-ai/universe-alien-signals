@@ -3,8 +3,7 @@ type: 'library'
 stack: 'frontend'
 
 project:
-  name: 'Alien Signals for React'
-  description: 'Alien Signals for React.'
+  description: 'The alien-signals for React.'
 
 dependsOn:
   - { id: '@packages-codebase/eslint', scope: 'development' }

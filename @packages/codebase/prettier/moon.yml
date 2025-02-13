@@ -3,8 +3,7 @@ type: 'library'
 stack: 'unknown'
 
 project:
-  name: 'Prettier'
-  description: 'Prettier configuration.'
+  description: 'Prettier configuration for codebase.'
 
 dependsOn:
   - { id: '@packages-config/typescript' }

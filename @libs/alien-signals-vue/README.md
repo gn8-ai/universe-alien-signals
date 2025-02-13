@@ -1,11 +1,10 @@
-# Alien Signals Vue
+# `alien-signals` for Vue
 
-<!-- ![License](https://img.shields.io/github/license/gn8-ai/alien-signals-framework-integrations) -->
-<!-- ![npm](https://img.shields.io/npm/v/alien-signals-framework-integrations) -->
+[![npm](https://img.shields.io/npm/v/@gn8/alien-signals-vue)](https://www.npmjs.com/package/@gn8/alien-signals-vue)
+[![license](https://img.shields.io/github/license/gn8-ai/universe-alien-signals)](https://github.com/gn8-ai/universe-alien-signals/blob/main/LICENSE.md)
+[![japanese documents](https://img.shields.io/badge/documents-Japanese-blue)](README.ja.md)
 
-[![Japanese Documents](https://img.shields.io/badge/Documents-Japanese-blue)](README.ja.md)
-
-A library that enables the use of the [Alien Signals](https://github.com/stackblitz/alien-signals) state management system in Vue.
+A library that enables the use of the [alien-signals](https://github.com/stackblitz/alien-signals) state management system in Vue.
 
 > [!WARNING]
 > While it should work fine for general use, it hasn't been fully tested. Please use with caution.
@@ -17,7 +16,7 @@ A library that enables the use of the [Alien Signals](https://github.com/stackbl
 - **Simple**: Easy to implement with minimal code
 - **Flexible**: Reuse a single signal across multiple frameworks
 - **Type Safe**: Full TypeScript support
-- **Best Reactivity**: Leverages Alien Signals' efficient signal management
+- **Best Reactivity**: Leverages alien-signals efficient signal management
 - **Tree Shakable**: Bundle only the code you need
 
 <br />
@@ -68,7 +67,7 @@ const count = useSignal($count);
 
 ### Examples
 
-- [Vue + Vite](../../@examples/vue-with-alien-signals)
+- [Vue](../../@examples/vue-with-alien-signals)
 
 <br />
 
@@ -88,7 +87,7 @@ This project is inspired by the following amazing library:
 
 ### [Nanostores](https://github.com/nanostores/nanostores)
 
-I have been a long-time user of Nanostores with Astro and was impressed by its ease of use. When I learned about Alien Signals, I wanted to utilize its reactivity with the same user experience as Nanostores, which led to the development of this library.
+I have been a long-time user of Nanostores with Astro and was impressed by its ease of use. When I learned about alien-signals, I wanted to utilize its reactivity with the same user experience as Nanostores, which led to the development of this library.
 
 Thanks to Nanostores' excellent implementation approach, we were able to quickly progress with support for various frameworks. Much of our code structure and design patterns are based on insights learned from Nanostores.
 
@@ -98,7 +97,7 @@ We deeply thank the Nanostores team for providing the inspiration and knowledge 
 
 ## 🎉 Acknowledgments
 
-### [Alien Signals](https://github.com/stackblitz/alien-signals)
+### [alien-signals](https://github.com/stackblitz/alien-signals)
 
-Most of this library's power comes from Alien Signals.
-We thank the developers of Alien Signals.
+Most of this library's power comes from alien-signals.
+We thank the developers of alien-signals.

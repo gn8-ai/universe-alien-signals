@@ -3,7 +3,6 @@ type: 'library'
 stack: 'unknown'
 
 project:
-  name: 'TypeScript'
   description: 'TypeScript configuration.'
 
 dependsOn:

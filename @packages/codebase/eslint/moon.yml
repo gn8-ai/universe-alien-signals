@@ -3,8 +3,7 @@ type: 'library'
 stack: 'unknown'
 
 project:
-  name: 'Eslint'
-  description: 'ESLint configuration.'
+  description: 'ESLint configuration for codebase.'
 
 dependsOn:
   - { id: '@packages-config/typescript' }
