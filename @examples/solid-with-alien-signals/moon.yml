@@ -17,7 +17,7 @@ tasks:
   ###########$$$$$$
 
   dev:
-    command: 'vite dev'
+    command: 'vite dev --port 4323'
     preset: 'server'
     deps:
       - '@libs/alien-signals-solid:build'

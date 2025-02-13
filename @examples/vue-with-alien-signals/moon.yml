@@ -17,7 +17,7 @@ tasks:
   ###########$$$$$$
 
   dev:
-    command: 'vite dev'
+    command: 'vite dev --port 4324'
     preset: 'server'
 
   ###########
