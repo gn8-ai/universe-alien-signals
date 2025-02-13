@@ -1,5 +1,11 @@
 # @gn8/alien-signals-react
 
+## 0.0.3
+
+### Patch Changes
+
+- [#5](https://github.com/gn8-ai/universe-alien-signals/pull/5) [`0226293`](https://github.com/gn8-ai/universe-alien-signals/commit/0226293e43c44a42c2640ac06dabb1c4f2a156d7) Thanks [@junpei-8](https://github.com/junpei-8)! - Release v0.0.3
+
 ## 0.0.2
 
 ### Patch Changes
