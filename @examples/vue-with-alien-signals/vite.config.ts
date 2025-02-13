@@ -1,7 +1,14 @@
 import vue from '@vitejs/plugin-vue';
 import { defineConfig } from 'vite';
 
-// https://vite.dev/config/
+/**
+ * @see {@link https://vite.dev/config | Vite Configuration}
+ */
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    /**
+     * @see {@link https://github.com/vitejs/vite-plugin-vue#readme | Vite Vue Plugin}
+     */
+    vue(),
+  ],
 });

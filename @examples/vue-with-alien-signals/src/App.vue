@@ -1,17 +1,34 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
+import { useSignal } from '@gn8/alien-signals-vue';
+import { signal } from 'alien-signals';
+
+/**
+ * Count signal.
+ */
+const $count = signal(0);
+
+/**
+ * Count vue signal.
+ */
+const count = useSignal($count);
 </script>
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
     <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+      <img class="logo vue" alt="Vue logo" src="/vue.svg" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <h1>Vue</h1>
+  <div class="card">
+    <button @click="count++">count is {{ count }}</button>
+    <p>
+      Edit
+      <code>src/App.vue</code>
+      and save to test HMR
+    </p>
+  </div>
+  <p class="read-the-docs">Click on the Vue logo to learn more</p>
 </template>
 
 <style scoped>
@@ -20,9 +37,6 @@ import HelloWorld from './components/HelloWorld.vue';
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
