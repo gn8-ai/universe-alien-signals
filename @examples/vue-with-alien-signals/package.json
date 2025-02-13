@@ -5,7 +5,7 @@
   "type": "module",
   "dependencies": {
     "@gn8/alien-signals-vue": "workspace:*",
-    "alien-signals": "^1.0.1",
+    "alien-signals": "^1.0.3",
     "vue": "^3.5.13"
   },
   "devDependencies": {

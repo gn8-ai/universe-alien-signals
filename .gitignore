@@ -19,12 +19,15 @@ dist/
 # Templates
 !_templates/**
 
-# OS files
-.DS_Store
+# Moon artifacts
+.moon/cache/
+.moon/docker/
 
 # Node dependencies
 node_modules/
 
-# Moon
-.moon/cache/
-.moon/docker/
+# Astro artifacts
+.astro/
+
+# OS files
+.DS_Store

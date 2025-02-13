@@ -1,0 +1,10 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navigation :global(.logo) {
+  height: 4em;
+  padding: 0.5em;
+}

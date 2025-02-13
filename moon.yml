@@ -3,7 +3,7 @@
 id: '@'
 
 project:
-  name: 'Alien Signals Frontend Framework Integrations'
+  name: 'universe-alien-signals'
   description: 'This repository enables the use of alien-signals with frontend frameworks.'
 
 workspace:

@@ -1,0 +1,23 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "references": [
+    {
+      "path": "../../@libs/alien-signals-react"
+    },
+    {
+      "path": "../../@libs/alien-signals-solid"
+    },
+    {
+      "path": "../../@libs/alien-signals-vue"
+    },
+    {
+      "path": "../../@packages/codebase/eslint"
+    },
+    {
+      "path": "../../@packages/codebase/prettier"
+    },
+    {
+      "path": "../../@packages/config/typescript"
+    }
+  ]
+}

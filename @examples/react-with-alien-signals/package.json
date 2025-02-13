@@ -5,7 +5,7 @@
   "type": "module",
   "dependencies": {
     "@gn8/alien-signals-react": "workspace:*",
-    "alien-signals": "^1.0.1",
+    "alien-signals": "^1.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

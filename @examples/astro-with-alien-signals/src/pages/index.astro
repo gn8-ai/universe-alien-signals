@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AstroLogoSvg from '../assets/astro.svg';
+import Navigation from './_components/Navigation.solid';
+---
+
+<Layout>
+  <div>
+    <a class="logo-link" href="https://astro.build" target="_blank">
+      <AstroLogoSvg class="logo astro" />
+    </a>
+  </div>
+  <h1>Astro</h1>
+  <Navigation />
+  <div class="card">
+    <p>
+      Edit <code>src/pages/index.astro</code> and save to test HMR
+    </p>
+  </div>
+  <p class="read-the-docs">Click on the Astro logo to learn more</p>
+</Layout>

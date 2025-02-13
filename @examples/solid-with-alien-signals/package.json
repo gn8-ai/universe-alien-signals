@@ -5,7 +5,7 @@
   "type": "module",
   "dependencies": {
     "@gn8/alien-signals-solid": "workspace:*",
-    "alien-signals": "^1.0.1",
+    "alien-signals": "^1.0.3",
     "solid-js": "^1.9.3"
   },
   "devDependencies": {

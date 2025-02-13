@@ -1,0 +1,26 @@
+---
+import SolidLogoSvg from '../_assets/solid.svg';
+import Navigation from '../_components/Navigation.solid';
+import Layout from '../../layouts/Layout.astro';
+import SolidCounter from './_components/SolidCounter.solid.tsx';
+---
+
+<Layout>
+  <div>
+    <a class="logo-link" href="https://solidjs.com" target="_blank">
+      <img class="logo solid" alt="Solid logo" src={SolidLogoSvg.src} />
+    </a>
+  </div>
+  <h1>Solid</h1>
+  <Navigation />
+  <div class="card">
+    <SolidCounter client:load />
+    <p>
+      Edit <code>src/pages/solid/index.astro</code> and save to test HMR
+    </p>
+  </div>
+  <p class="read-the-docs">Click on the Solid logo to learn more</p>
+  <p>
+    <a href="/">Back to Astro</a>
+  </p>
+</Layout>

@@ -3,6 +3,9 @@
   "files": [],
   "references": [
     {
+      "path": "@examples/astro-with-alien-signals"
+    },
+    {
       "path": "@examples/react-with-alien-signals"
     },
     {

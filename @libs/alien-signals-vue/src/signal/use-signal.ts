@@ -1,5 +1,11 @@
 import { effect, signal } from 'alien-signals';
-import { getCurrentScope, onScopeDispose, shallowRef } from 'vue';
+import {
+  computed,
+  getCurrentScope,
+  onScopeDispose,
+  shallowRef,
+  type ShallowRef,
+} from 'vue';
 
 /**
  * Represents a writable signal type. This is the return type of the signal() function.
@@ -36,7 +42,7 @@ type WritableSignal<T> = ReturnType<typeof signal<T>>;
  * @returns        A reactive reference to the current value.
  */
 export function useSignal<T>(signal: WritableSignal<T>) {
-  const state = shallowRef<T>(signal());
+  const state = shallowRef(signal()) as ShallowRef<T>;
 
   const unsubscribe = effect(() => {
     state.value = signal();
@@ -47,5 +53,9 @@ export function useSignal<T>(signal: WritableSignal<T>) {
     onScopeDispose(unsubscribe);
   }
 
-  return state;
+  // Return a computed reference to the signal value
+  return computed({
+    get: () => state.value,
+    set: (value) => signal(value),
+  });
 }
