@@ -33,6 +33,7 @@ export function useSignalGetter<T>(signal: WritableSignal<T>) {
         callback();
       }),
     () => signal(),
+    () => signal(),
   );
 }
 
