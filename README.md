@@ -5,9 +5,6 @@
 
 A library that enables simple use of the [alien-signals](https://github.com/stackblitz/alien-signals) state management system in modern frontend frameworks.
 
-> [!WARNING]
-> While it should work fine for general use, it hasn't been fully tested. Please use with caution.
-
 <br />
 
 ## 🛸 Features

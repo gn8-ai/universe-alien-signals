@@ -6,9 +6,6 @@
 
 A library that enables the use of the [alien-signals](https://github.com/stackblitz/alien-signals) state management system in Solid.
 
-> [!WARNING]
-> While it should work fine for general use, it hasn't been fully tested. Please use with caution.
-
 <br />
 
 ## 🛸 Features

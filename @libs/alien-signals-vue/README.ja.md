@@ -6,9 +6,6 @@
 
 [alien-signals](https://github.com/stackblitz/alien-signals) の状態管理システムを Vue で扱うことができるライブラリ。
 
-> [!WARNING]
-> 一般的な利用では問題なく利用できると思いますが、完全なテストはされていません。利用の際はご注意ください。
-
 <br />
 
 ## 🛸 特徴

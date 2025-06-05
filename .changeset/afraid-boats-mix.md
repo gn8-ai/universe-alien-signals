@@ -6,6 +6,8 @@
 
 # Add Support for alien-signals v2 🎉
 
+This update brings compatibility with alien-signals v2, introducing enhanced performance and improved type safety. The changes maintain backward compatibility while leveraging the new features and optimizations available in the latest version.
+
 <br />
 
 ## Package Dependency Updates
