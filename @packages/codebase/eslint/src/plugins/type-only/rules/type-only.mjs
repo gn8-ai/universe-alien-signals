@@ -10,7 +10,6 @@ export default defineRule({
     docs: {
       description:
         'Makes selected files type-only (so they can be excluded from test coverage, etc.)',
-      url: 'https://github.com/jbreckmckye/eslint-plugin-type-only-files/README.md',
     },
     messages: {
       exportTypes: 'Type-only files must only export types.',

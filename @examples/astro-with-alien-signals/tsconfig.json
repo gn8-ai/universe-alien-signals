@@ -1,5 +1,8 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "@packages-config/typescript/configs/astro.json",
+  "compilerOptions": {
+    "outDir": "../../.moon/cache/types/@examples/astro-with-alien-signals"
+  },
   "references": [
     {
       "path": "../../@libs/alien-signals-react"

@@ -1,5 +1,6 @@
 import { createRequire } from 'node:module';
 import { includeIgnoreFile } from '@eslint/compat';
+import { globalIgnores } from 'eslint/config';
 import typescriptEslint from 'typescript-eslint';
 
 /**
@@ -18,4 +19,9 @@ export default typescriptEslint.config(
    * @see https://eslint.org/docs/latest/use/configure/ignore#including-gitignore-file
    */
   includeIgnoreFile(resolve('../../../../../../.gitignore')),
+
+  /**
+   * @see https://eslint.org/docs/latest/use/configure/ignore
+   */
+  globalIgnores(['**/*.d.{,c,m}ts{,x}']),
 );

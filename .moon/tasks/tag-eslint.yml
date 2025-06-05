@@ -1,0 +1,39 @@
+# Documents: https://moonrepo.dev/docs/config/tasks
+
+tasks:
+  ###########
+  ## Check ##
+  ###########
+
+  check-eslint:
+    command: 'eslint .'
+    args:
+      - '--cache'
+      - '--cache-location'
+      - '$workspaceRoot/.moon/cache/projects/$project/eslint'
+    options:
+      runInCI: true
+    deps:
+      - target: 'lint-setup'
+        optional: true
+      - target: 'check-setup'
+        optional: true
+
+  ############
+  ## Format ##
+  ############
+
+  format-eslint:
+    command: 'eslint .'
+    args:
+      - '--fix'
+      - '--cache'
+      - '--cache-location'
+      - '$workspaceRoot/.moon/cache/projects/$project/eslint'
+    deps:
+      - target: 'lint-setup'
+        optional: true
+      - target: 'format-setup'
+        optional: true
+    options:
+      cache: false

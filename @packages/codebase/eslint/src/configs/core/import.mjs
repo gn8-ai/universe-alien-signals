@@ -20,6 +20,7 @@ export default typescriptEslint.config(
       'import/resolver': { typescript: true },
     },
     plugins: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       import: importPlugin,
     },
     rules: {
@@ -46,8 +47,8 @@ export default typescriptEslint.config(
         'error',
         {
           devDependencies: [
-            '**/{,__}{test,spec}{,__,s,s__}/**/*',
-            '**/*.{test,spec,config}.*',
+            '**/{,__}{test,spec,development}{,__,s,s__}/**/*',
+            '**/*.{test,spec,config,dev,development}.*',
           ],
         },
       ],
@@ -72,7 +73,7 @@ export default typescriptEslint.config(
         {
           type: 'natural',
           newlinesBetween: 'never',
-          internalPattern: ['^@/.*'],
+          internalPattern: ['^~/.*', '^:/.*'],
           groups: [
             'builtin',
             'builtin-type',

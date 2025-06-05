@@ -23,8 +23,4 @@ export default defineConfig({
      */
     vue(),
   ],
-
-  experimental: {
-    svg: true,
-  },
 });

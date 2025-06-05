@@ -1,3 +1,5 @@
+/** @jsxImportSource react */
+
 import { useSignal } from '@gn8/alien-signals-react';
 import { $counter } from '../../_signals/counter';
 

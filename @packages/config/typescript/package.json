@@ -9,11 +9,10 @@
   },
   "dependencies": {
     "@total-typescript/ts-reset": "^0.6.1",
-    "type-fest": "^4.31.0",
-    "typescript": "^5.7.2"
+    "type-fest": "^4.41.0",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@packages-codebase/eslint": "workspace:*",
-    "@packages-codebase/prettier": "workspace:*"
+    "@types/node": "^22.15.29"
   }
 }

@@ -1,11 +1,11 @@
 {
   "extends": "@packages-config/typescript/configs/base.json",
+  "compilerOptions": {
+    "outDir": "../../../.moon/cache/types/@packages/codebase/eslint"
+  },
   "references": [
     {
       "path": "../../config/typescript"
-    },
-    {
-      "path": "../prettier"
     }
   ]
 }

@@ -1,6 +1,4 @@
-/**
- * @jsxImportSource solid-js
- */
+/** @jsxImportSource solid-js */
 
 import { useSignal } from '@gn8/alien-signals-solid';
 import { $counter } from '../../_signals/counter';

@@ -6,6 +6,7 @@ enabledLanguageIds:
   - "*"
 words:
   - abspath
+  - appthrust
   - arrayify
   - astro
   - boolify

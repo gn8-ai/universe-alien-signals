@@ -1,0 +1,44 @@
+# Documents: https://moonrepo.dev/docs/config/tasks
+
+tasks:
+  ###########
+  ## Check ##
+  ###########
+
+  check-prettier:
+    command: 'prettier .'
+    args:
+      - '--check'
+      - '--cache'
+      - '--cache-location'
+      - '$workspaceRoot/.moon/cache/projects/$project/prettier'
+      - '--ignore-path'
+      - '$workspaceRoot/.gitignore'
+    options:
+      runInCI: true
+    deps:
+      - target: 'lint-setup'
+        optional: true
+      - target: 'check-setup'
+        optional: true
+
+  ############
+  ## Format ##
+  ############
+
+  format-prettier:
+    command: 'prettier .'
+    args:
+      - '--write'
+      - '--cache'
+      - '--cache-location'
+      - '$workspaceRoot/.moon/cache/projects/$project/prettier'
+      - '--ignore-path'
+      - '$workspaceRoot/.gitignore'
+    deps:
+      - target: 'lint-setup'
+        optional: true
+      - target: 'format-setup'
+        optional: true
+    options:
+      cache: false

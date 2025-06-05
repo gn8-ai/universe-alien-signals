@@ -1,3 +1,10 @@
+import { createRequire } from 'node:module';
+
+/**
+ * @see {@link https://nodejs.org/api/module.html#modulecreaterequirefilename | Document}
+ */
+const require = createRequire(import.meta.url);
+
 /**
  * JSDoc configuration.
  *
@@ -9,7 +16,7 @@ export default {
   /**
    * Load the JSDoc plugin.
    */
-  plugins: ['prettier-plugin-jsdoc'],
+  plugins: [require.resolve('prettier-plugin-jsdoc')],
 
   /**
    * Enable TSDoc support.
@@ -25,6 +32,11 @@ export default {
    * Specifies whether to separate tags by groups.
    */
   jsdocSeparateTagGroups: true,
+
+  /**
+   * Specifies whether to separate returns from parameters.
+   */
+  jsdocSeparateReturnsFromParam: false,
 
   /**
    * Specifies whether to convert code blocks to code fences.
@@ -45,7 +57,7 @@ export default {
   /**
    * Specifies whether to split comment lines into multiple lines.
    */
-  jsdocCommentLineStrategy: 'multiline',
+  jsdocCommentLineStrategy: 'keep',
 
   /**
    * Specifies whether to preserve indentation in Example section code.

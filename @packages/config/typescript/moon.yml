@@ -1,10 +1,15 @@
 id: '@packages-config/typescript'
 type: 'library'
 stack: 'unknown'
+tags:
+  - 'eslint'
+  - 'prettier'
+  - 'typescript'
 
 project:
   description: 'TypeScript configuration.'
 
 dependsOn:
-  - { id: '@packages-codebase/eslint', scope: 'development' }
-  - { id: '@packages-codebase/prettier', scope: 'development' }
+  []
+  # - { id: '@packages-codebase/eslint', scope: 'development' } # NOTE: Avoid circular dependencies.
+  # - { id: '@packages-codebase/prettier', scope: 'development' } # NOTE: Avoid circular dependencies.

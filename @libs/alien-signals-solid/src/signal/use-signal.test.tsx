@@ -1,3 +1,5 @@
+/// <reference lib="dom" />
+
 import { render } from '@solidjs/testing-library';
 import { signal } from 'alien-signals';
 import { expect, test } from 'bun:test';

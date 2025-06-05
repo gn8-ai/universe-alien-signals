@@ -1,6 +1,10 @@
 id: '@examples/astro-with-alien-signals'
 type: 'application'
 stack: 'frontend'
+tags:
+  - 'eslint'
+  - 'prettier'
+  - 'typescript'
 
 project:
   name: 'Astro with alien-signals example'
@@ -15,9 +19,9 @@ dependsOn:
   - { id: '@packages-config/typescript', scope: 'development' }
 
 tasks:
-  ###########$$$$$$
+  #################
   ## Development ##
-  ###########$$$$$$
+  #################
 
   dev:
     command: 'astro dev --port 4321'
@@ -38,42 +42,15 @@ tasks:
     options:
       runInCI: true
 
-  ###########
-  ## Check ##
-  ###########
+  ##########
+  ## Lint ##
+  ##########
 
-  check-prettier:
+  lint-setup:
     deps:
       - 'sync'
       - '@libs/alien-signals-react:build'
       - '@libs/alien-signals-solid:build'
       - '@libs/alien-signals-vue:build'
-  check-eslint:
-    deps:
-      - 'sync'
-      - '@libs/alien-signals-react:build'
-      - '@libs/alien-signals-solid:build'
-      - '@libs/alien-signals-vue:build'
-  check-types:
-    deps:
-      - 'sync'
-      - '@libs/alien-signals-react:build'
-      - '@libs/alien-signals-solid:build'
-      - '@libs/alien-signals-vue:build'
-
-  ############
-  ## Format ##
-  ############
-
-  format-prettier:
-    deps:
-      - 'sync'
-      - '@libs/alien-signals-react:build'
-      - '@libs/alien-signals-solid:build'
-      - '@libs/alien-signals-vue:build'
-  format-eslint:
-    deps:
-      - 'sync'
-      - '@libs/alien-signals-react:build'
-      - '@libs/alien-signals-solid:build'
-      - '@libs/alien-signals-vue:build'
+    options:
+      runInCI: true
