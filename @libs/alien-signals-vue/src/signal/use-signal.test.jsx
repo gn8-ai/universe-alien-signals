@@ -1,3 +1,5 @@
+/// <reference lib="dom" />
+
 import { render } from '@testing-library/vue';
 import { signal } from 'alien-signals';
 import { expect, test } from 'bun:test';

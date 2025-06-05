@@ -12,7 +12,7 @@ tasks:
   exec:
     type: 'run'
     command: 'eval'
-    toolchain: 'system'
+    platform: 'system'
 
   ###########
   ## Check ##
@@ -20,71 +20,22 @@ tasks:
 
   check:
     deps:
-      - 'check-prettier'
-      - 'check-eslint'
-      - 'check-types'
-
-  check-prettier:
-    command: 'prettier .'
-    args:
-      - '--check'
-      - '--cache'
-      - '--cache-location'
-      - '$workspaceRoot/.moon/cache/projects/$project/prettier'
-      - '--ignore-path'
-      - '$workspaceRoot/.gitignore'
-    options:
-      runInCI: true
-
-  check-eslint:
-    command: 'eslint .'
-    args:
-      - '--cache'
-      - '--cache-location'
-      - '$workspaceRoot/.moon/cache/projects/$project/eslint'
-    options:
-      runInCI: true
-
-  check-types:
-    command: 'tsc'
-    args:
-      - '--noEmit'
-      - '--skipLibCheck'
-      - '--checkJs'
-      - 'false'
-      - '--outDir'
-      - '$workspaceRoot/.moon/cache/projects/$project/types'
-    options:
-      runInCI: true
+      - target: 'check-prettier'
+        optional: true
+      - target: 'check-eslint'
+        optional: true
+      - target: 'root-check-types'
+        optional: true
 
   ############
   ## Format ##
   ############
 
   format:
-    type: 'run'
     deps:
-      - 'format-prettier'
-      - 'format-eslint'
+      - target: 'format-eslint'
+        optional: true
+      - target: 'format-prettier'
+        optional: true
     options:
       runDepsInParallel: false
-
-  format-prettier:
-    type: 'run'
-    command: 'prettier .'
-    args:
-      - '--write'
-      - '--cache'
-      - '--cache-location'
-      - '$workspaceRoot/.moon/cache/projects/$project/prettier'
-      - '--ignore-path'
-      - '$workspaceRoot/.gitignore'
-
-  format-eslint:
-    type: 'run'
-    command: 'eslint .'
-    args:
-      - '--fix'
-      - '--cache'
-      - '--cache-location'
-      - '$workspaceRoot/.moon/cache/projects/$project/eslint'

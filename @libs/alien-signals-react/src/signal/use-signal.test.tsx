@@ -9,7 +9,7 @@ import { useSignal } from './use-signal';
 /**
  * Tests that the `useSignal` hook can be used.
  */
-test('Renders simple signal', async () => {
+test('Renders simple signal', () => {
   const testId = crypto.randomUUID();
 
   let renders = 0;
@@ -57,9 +57,7 @@ test('Renders simple signal', async () => {
   expect(renders).toBe(2);
 
   // Update string signal value
-  await act(() => {
-    stringSignal('b');
-  });
+  act(() => stringSignal('b'));
 
   // Verify updated string signal value
   expect(renders).toBe(4);
@@ -67,9 +65,7 @@ test('Renders simple signal', async () => {
   expect(screen.getByTestId(numberComponentId).textContent).toBe('0');
 
   // Update number signal value
-  await act(() => {
-    numberSignal(1);
-  });
+  act(() => numberSignal(1));
 
   // Verify updated number signal value
   expect(renders).toBe(6);
@@ -77,7 +73,7 @@ test('Renders simple signal', async () => {
   expect(screen.getByTestId(numberComponentId).textContent).toBe('1');
 
   // Unmount components
-  await act(() => screen.getByTestId(wrapperDisplayTriggerId).click());
+  act(() => screen.getByTestId(wrapperDisplayTriggerId).click());
 
   // Verify components are unmounted
   expect(screen.queryByTestId(stringComponentId)).toBeNull();
@@ -85,7 +81,7 @@ test('Renders simple signal', async () => {
   expect(renders).toBe(6);
 
   // Update signal values while unmounted
-  await act(() => {
+  act(() => {
     stringSignal('c');
     numberSignal(2);
   });
@@ -96,7 +92,7 @@ test('Renders simple signal', async () => {
   expect(renders).toBe(6);
 
   // Remount components
-  await act(() => screen.getByTestId(wrapperDisplayTriggerId).click());
+  act(() => screen.getByTestId(wrapperDisplayTriggerId).click());
   expect(screen.getByTestId(stringComponentId).textContent).toBe('c');
   expect(screen.getByTestId(numberComponentId).textContent).toBe('2');
   expect(renders).toBe(8);

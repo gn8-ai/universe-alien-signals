@@ -2,11 +2,11 @@
 
 node:
   packageManager: bun
-
-bun:
+  addEnginesConstraint: false
   dependencyVersionFormat: workspace
   syncProjectWorkspaceDependencies: true
 
 typescript:
+  routeOutDirToCache: true
   syncProjectReferences: true
   syncProjectReferencesToPaths: false

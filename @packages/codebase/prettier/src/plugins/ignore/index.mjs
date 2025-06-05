@@ -19,12 +19,14 @@ export default {
       astFormat,
       parse: (source) => source,
       locStart: () => 0,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access
       locEnd: (node) => node.length,
     },
   },
 
   printers: {
     [astFormat]: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
       print: (path) => path.getNode() || '',
     },
   },

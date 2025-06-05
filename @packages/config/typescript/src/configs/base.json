@@ -1,7 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
     "lib": ["ESNext"],
     "target": "ESNext",
     "module": "ESNext",
@@ -16,24 +15,19 @@
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "incremental": true,
     "isolatedModules": true,
     "noEmit": false,
+    "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noUncheckedIndexedAccess": true,
     "noUncheckedSideEffectImports": true,
     "resolveJsonModule": true,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "verbatimModuleSyntax": true,
-    "outDir": "${configDir}/.cache/types",
-    "paths": {
-      "~": ["${configDir}"],
-      "~/*": ["${configDir}/*"],
-      "@": ["${configDir}/src"],
-      "@/*": ["${configDir}/src/*"]
-    },
     "types": ["@packages-config/typescript"]
   },
   "files": [],
@@ -43,6 +37,7 @@
     "${configDir}/dist",
     "${configDir}/build",
     "${configDir}/.*",
+    "${configDir}/**/_",
     "${configDir}/**/@*"
   ]
 }

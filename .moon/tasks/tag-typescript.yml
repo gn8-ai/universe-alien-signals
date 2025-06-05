@@ -1,0 +1,20 @@
+# Documents: https://moonrepo.dev/docs/concepts/task-inheritance
+
+tasks:
+  ###########
+  ## Check ##
+  ###########
+
+  check-types:
+    command: 'tsc'
+    args:
+      - '--build'
+      - '--pretty'
+      - '--verbose'
+    options:
+      runInCI: false
+    deps:
+      - target: 'lint-setup'
+        optional: true
+      - target: 'check-setup'
+        optional: true

@@ -29,21 +29,25 @@
     ".": "./dist/index.js",
     "./package.json": "./package.json"
   },
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "solid-js": ">=1.6.0",
-    "alien-signals": ">=1.0.0"
+    "alien-signals": ">=2.0.0"
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.26.7",
-    "@happy-dom/global-registrator": "^16.7.2",
+    "@babel/core": "^7.27.4",
+    "@happy-dom/global-registrator": "^17.6.3",
     "@packages-codebase/eslint": "workspace:*",
     "@packages-codebase/prettier": "workspace:*",
     "@packages-config/typescript": "workspace:*",
     "@solidjs/testing-library": "^0.8.10",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
-    "babel-preset-solid": "^1.9.3",
-    "tsup": "^8.3.6"
+    "@types/bun": "^1.2.15",
+    "babel-preset-solid": "^1.9.6",
+    "tsup": "^8.5.0"
   }
 }

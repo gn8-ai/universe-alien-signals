@@ -29,19 +29,23 @@
     ".": "./dist/index.js",
     "./package.json": "./package.json"
   },
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "react": ">=18.0.0",
-    "alien-signals": ">=1.0.0"
+    "alien-signals": ">=2.0.0"
   },
   "dependencies": {},
   "devDependencies": {
-    "@happy-dom/global-registrator": "^16.7.2",
+    "@happy-dom/global-registrator": "^17.6.3",
     "@packages-codebase/eslint": "workspace:*",
     "@packages-codebase/prettier": "workspace:*",
     "@packages-config/typescript": "workspace:*",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
-    "tsup": "^8.3.6"
+    "@testing-library/react": "^16.3.0",
+    "@types/bun": "^1.2.15",
+    "tsup": "^8.5.0"
   }
 }

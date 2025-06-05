@@ -1,5 +1,8 @@
 {
   "extends": "@packages-config/typescript/configs/solid.json",
+  "compilerOptions": {
+    "outDir": "../../.moon/cache/types/@libs/alien-signals-solid"
+  },
   "references": [
     {
       "path": "../../@packages/codebase/eslint"

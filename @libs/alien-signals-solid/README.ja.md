@@ -6,9 +6,6 @@
 
 [alien-signals](https://github.com/stackblitz/alien-signals) の状態管理システムを Solid で扱うことができるライブラリ。
 
-> [!WARNING]
-> 一般的な利用では問題なく利用できると思いますが、完全なテストはされていません。利用の際はご注意ください。
-
 <br />
 
 ## 🛸 特徴
@@ -75,9 +72,9 @@ export default function Counter() {
 
 以下の機能やサポートを順次追加していく予定です。
 
-- [ ] SSR の検証と対応
+- [ ] SSR ハイドレーション時のエラー回避方法の検証とドキュメント化
 - [ ] テストコードの拡充
-- [ ] Astro フレームワークの使用例作成
+- [x] Astro フレームワークの使用例作成
 
 <br />
 

@@ -1,7 +1,8 @@
 {
   "extends": "@packages-config/typescript/configs/react.json",
   "compilerOptions": {
-    "lib": ["ESNext", "DOM"]
+    "lib": ["ESNext", "DOM"],
+    "outDir": "../../.moon/cache/types/@examples/react-with-alien-signals"
   },
   "references": [
     {

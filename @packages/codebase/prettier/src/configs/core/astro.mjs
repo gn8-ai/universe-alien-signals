@@ -1,3 +1,10 @@
+import { createRequire } from 'node:module';
+
+/**
+ * @see {@link https://nodejs.org/api/module.html#modulecreaterequirefilename | Document}
+ */
+const require = createRequire(import.meta.url);
+
 /**
  * @type {import('prettier').Config}
  *
@@ -8,7 +15,7 @@ export default {
   /**
    * Load the Astro plugin.
    */
-  plugins: ['prettier-plugin-astro'],
+  plugins: [require.resolve('prettier-plugin-astro')],
 
   /**
    * Allow shorthand syntax.

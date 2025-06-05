@@ -93,7 +93,20 @@ export default typescriptEslint.config(
         'always',
         {
           line: { markers: ['/'] },
-          block: { exceptions: ['=', '#__PURE__'], balanced: true },
+          block: {
+            /**
+             * @see https://terser.org/docs/miscellaneous/#annotations
+             */
+            exceptions: [
+              '=',
+              '#__INLINE__',
+              '#__PURE__',
+              '#__NOINLINE__',
+              '#__KEY__',
+              '#__MANGLE_PROP__',
+            ],
+            balanced: true,
+          },
         },
       ],
     },

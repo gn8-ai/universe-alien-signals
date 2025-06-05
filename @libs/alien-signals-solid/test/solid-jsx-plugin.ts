@@ -125,4 +125,4 @@ export default function solidJsxPlugin(
 /**
  * Loads the solid-js plugin.
  */
-plugin(solidJsxPlugin({ generate: 'dom' }));
+await plugin(solidJsxPlugin({ generate: 'dom' }));

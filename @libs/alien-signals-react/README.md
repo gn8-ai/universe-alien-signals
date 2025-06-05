@@ -6,9 +6,6 @@
 
 A library that enables the use of the [alien-signals](https://github.com/stackblitz/alien-signals) state management system in React.
 
-> [!WARNING]
-> While it should work fine for general use, it hasn't been fully tested. Please use with caution.
-
 <br />
 
 ## 🛸 Features
@@ -75,9 +72,9 @@ export default function Counter() {
 
 The following features and support will be added sequentially:
 
-- [ ] SSR verification and support
+- [ ] Documentation and solutions for handling SSR hydration errors
 - [ ] Enhancement of test coverage
-- [ ] Creation of Astro framework usage examples
+- [x] Creation of Astro framework usage examples
 
 <br />
 

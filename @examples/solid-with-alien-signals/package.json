@@ -5,15 +5,15 @@
   "type": "module",
   "dependencies": {
     "@gn8/alien-signals-solid": "workspace:*",
-    "alien-signals": "^1.0.3",
-    "solid-js": "^1.9.3"
+    "alien-signals": "^2.0.5",
+    "solid-js": "^1.9.7"
   },
   "devDependencies": {
     "@packages-codebase/eslint": "workspace:*",
     "@packages-codebase/prettier": "workspace:*",
     "@packages-config/typescript": "workspace:*",
-    "typescript": "~5.6.2",
-    "vite": "^6.0.5",
-    "vite-plugin-solid": "^2.11.0"
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-solid": "^2.11.6"
   }
 }
