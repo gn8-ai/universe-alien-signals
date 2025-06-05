@@ -43,6 +43,7 @@
     "@solidjs/testing-library": "^0.8.10",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
+    "@types/bun": "^1.2.15",
     "babel-preset-solid": "^1.9.3",
     "tsup": "^8.3.6"
   }

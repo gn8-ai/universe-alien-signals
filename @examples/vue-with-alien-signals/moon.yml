@@ -1,6 +1,10 @@
 id: '@examples/vue-with-alien-signals'
 type: 'application'
 stack: 'frontend'
+tags:
+  - 'eslint'
+  - 'prettier'
+  - 'typescript'
 
 project:
   description: 'Vue with alien-signals example.'
@@ -12,35 +16,20 @@ dependsOn:
   - { id: '@packages-config/typescript', scope: 'development' }
 
 tasks:
-  ###########$$$$$$
+  #################
   ## Development ##
-  ###########$$$$$$
+  #################
 
   dev:
     command: 'vite dev --port 4324'
     preset: 'server'
 
-  ###########
-  ## Check ##
-  ###########
+  ##########
+  ## Lint ##
+  ##########
 
-  check-prettier:
+  lint-setup:
     deps:
       - '@libs/alien-signals-vue:build'
-  check-eslint:
-    deps:
-      - '@libs/alien-signals-vue:build'
-  check-types:
-    deps:
-      - '@libs/alien-signals-vue:build'
-
-  ############
-  ## Format ##
-  ############
-
-  format-prettier:
-    deps:
-      - '@libs/alien-signals-vue:build'
-  format-eslint:
-    deps:
-      - '@libs/alien-signals-vue:build'
+    options:
+      runInCI: true

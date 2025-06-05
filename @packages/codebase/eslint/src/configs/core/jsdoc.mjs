@@ -41,6 +41,17 @@ export default typescriptEslint.config(
       ],
 
       /**
+       * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/multiline-blocks.md
+       */
+      'jsdoc/multiline-blocks': [
+        'warn',
+        {
+          noSingleLineBlocks: true,
+          singleLineTags: ['type', 'ignore', 'jsxImportSource'],
+        },
+      ],
+
+      /**
        * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-param.md
        */
       'jsdoc/require-param': ['warn', { exemptedBy: ['inheritdoc', 'jsx'] }],

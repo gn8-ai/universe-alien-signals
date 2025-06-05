@@ -1,6 +1,4 @@
-/**
- * @jsxImportSource solid-js
- */
+/** @jsxImportSource solid-js */
 
 import reactSvg from '../_assets/react.svg';
 import solidSvg from '../_assets/solid.svg';

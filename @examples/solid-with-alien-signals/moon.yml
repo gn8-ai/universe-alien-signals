@@ -1,6 +1,10 @@
 id: '@examples/solid-with-alien-signals'
 type: 'application'
 stack: 'frontend'
+tags:
+  - 'eslint'
+  - 'prettier'
+  - 'typescript'
 
 project:
   description: 'Solid with alien-signals example.'
@@ -12,9 +16,9 @@ dependsOn:
   - { id: '@packages-config/typescript', scope: 'development' }
 
 tasks:
-  ###########$$$$$$
+  #################
   ## Development ##
-  ###########$$$$$$
+  #################
 
   dev:
     command: 'vite dev --port 4323'
@@ -22,27 +26,12 @@ tasks:
     deps:
       - '@libs/alien-signals-solid:build'
 
-  ###########
-  ## Check ##
-  ###########
+  ##########
+  ## Lint ##
+  ##########
 
-  check-prettier:
+  lint-setup:
     deps:
       - '@libs/alien-signals-solid:build'
-  check-eslint:
-    deps:
-      - '@libs/alien-signals-solid:build'
-  check-types:
-    deps:
-      - '@libs/alien-signals-solid:build'
-
-  ############
-  ## Format ##
-  ############
-
-  format-prettier:
-    deps:
-      - '@libs/alien-signals-solid:build'
-  format-eslint:
-    deps:
-      - '@libs/alien-signals-solid:build'
+    options:
+      runInCI: true

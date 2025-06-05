@@ -53,4 +53,4 @@ function vueJsxPlugin(options: VueJSXPluginOptions = {}): BunPlugin {
 /**
  * Loads the vue jsx plugin.
  */
-plugin(vueJsxPlugin());
+await plugin(vueJsxPlugin());

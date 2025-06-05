@@ -24,12 +24,13 @@ A library that enables simple use of the [alien-signals](https://github.com/stac
 
 | Framework | Status | SSR Support | Usage        | Repo                              |
 | --------- | ------ | ----------- | ------------ | --------------------------------- |
-| React     | ✅     | ⚠️          | [🔗](#react) | [🔗](./@libs/alien-signals-react) |
-| Solid     | ✅     | ⚠️          | [🔗](#solid) | [🔗](./@libs/alien-signals-solid) |
-| Vue       | ✅     | ⚠️          | [🔗](#vue)   | [🔗](./@libs/alien-signals-vue)   |
-| Svelte    | ⌛️     | ⚠️          | ⌛️           | ⌛️                                |
+| React     | ✅     | 🔼          | [🔗](#react) | [🔗](./@libs/alien-signals-react) |
+| Solid     | ✅     | 🔼          | [🔗](#solid) | [🔗](./@libs/alien-signals-solid) |
+| Vue       | ✅     | 🔼          | [🔗](#vue)   | [🔗](./@libs/alien-signals-vue)   |
+| Svelte    | ⌛️     | ⌛️          | ⌛️           | ⌛️                                |
 
 - ✅: Implemented
+- 🔼: Avoidable
 - 🛑: Not Implemented
 - ⚠️: Not Verified
 - ⌛️: Coming Soon
@@ -132,9 +133,9 @@ const count = useSignal($count);
 
 The following features and support will be added sequentially:
 
-- [ ] Implementation of `@gn8/alien-signals-svelte`
-- [ ] SSR verification and support
+- [ ] Documentation and solutions for handling SSR hydration errors
 - [ ] Enhancement of test coverage
+- [ ] Implementation of `@gn8/alien-signals-svelte`
 - [x] Creation of Astro framework usage examples
 
 <br />

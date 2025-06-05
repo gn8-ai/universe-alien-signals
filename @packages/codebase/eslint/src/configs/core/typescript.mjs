@@ -1,4 +1,3 @@
-import typescriptEslintParser from '@typescript-eslint/parser';
 import typescriptEslint from 'typescript-eslint';
 import typeOnly from '../../plugins/type-only/index.mjs';
 
@@ -9,14 +8,15 @@ import typeOnly from '../../plugins/type-only/index.mjs';
  */
 export default typescriptEslint.config(
   // Typescript eslint recommended rules
-  ...typescriptEslint.configs.recommended,
+  typescriptEslint.configs.recommendedTypeChecked,
 
   // Core configs
   {
     languageOptions: {
-      parser: typescriptEslintParser,
       parserOptions: {
         sourceType: 'module',
+        projectService: true,
+        tsconfigRootDir: process.cwd(),
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },
@@ -69,6 +69,32 @@ export default typescriptEslint.config(
        * @see https://typescript-eslint.io/rules/no-this-alias
        */
       '@typescript-eslint/no-this-alias': ['error', { allowedNames: ['self'] }],
+
+      /**
+       * @see https://typescript-eslint.io/rules/no-misused-promises
+       */
+      '@typescript-eslint/no-misused-promises': [
+        'error',
+        {
+          checksVoidReturn: {
+            arguments: false,
+            attributes: false,
+          },
+        },
+      ],
+
+      /**
+       * @see https://typescript-eslint.io/rules/no-unused-expressions
+       */
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        {
+          allowShortCircuit: true,
+          allowTernary: true,
+          allowTaggedTemplates: true,
+          enforceForJSX: true,
+        },
+      ],
     },
   },
 
@@ -76,11 +102,6 @@ export default typescriptEslint.config(
   {
     files: ['**/*.{d,type}.{,c,m}ts{,x}'],
     rules: {
-      /**
-       * @see https://typescript-eslint.io/rules/no-var-requires
-       */
-      'no-var': 'off',
-
       /**
        * @see https://typescript-eslint.io/rules/triple-slash-reference
        */

@@ -1,15 +1,12 @@
 # Documents: https://moonrepo.dev/docs/config/project
 
 id: '@'
+tags:
+  - 'typescript-root'
 
 project:
   name: 'universe-alien-signals'
   description: 'This repository enables the use of alien-signals with frontend frameworks.'
-
-workspace:
-  inheritedTasks:
-    include:
-      - 'exec'
 
 dependsOn:
   - { id: '@packages-codebase/eslint', scope: 'development' }
@@ -21,26 +18,49 @@ tasks:
   ## Github Actions ##
   ####################
 
-  github-actions:
-    command: 'act push --container-daemon-socket - --container-architecture linux/amd64 -j'
-    preset: 'server'
+  github-actions-ci:
+    command: 'act -W .github/workflows/ci.yml --container-daemon-socket - --container-architecture linux/amd64'
+    options:
+      cache: false
 
   #############
   ## Release ##
   #############
 
   release:
-    command: 'bunx changeset'
-    preset: 'server'
+    command: 'changeset'
+    options:
+      cache: false
+      persistent: true
 
   release-version:
-    command: 'bunx changeset version'
-    preset: 'server'
+    command: 'changeset version'
+    options:
+      cache: false
+      persistent: true
 
   release-tag:
-    command: 'bunx changeset tag'
-    preset: 'server'
+    command: 'changeset tag'
+    options:
+      cache: false
+      persistent: true
 
   release-publish:
-    command: 'bunx changeset publish'
-    preset: 'server'
+    command: 'changeset publish'
+    options:
+      cache: false
+      persistent: true
+
+  ##################
+  ## Dependencies ##
+  ##################
+
+  dependencies-check:
+    command: 'ncu --root --workspaces'
+    options:
+      cache: false
+
+  dependencies-update:
+    command: 'ncu --root --workspaces -u'
+    options:
+      cache: false

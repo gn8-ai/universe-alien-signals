@@ -2,7 +2,7 @@ import { core } from '@packages-codebase/prettier';
 import { mergeConfig } from '@packages-codebase/prettier/utils';
 
 /**
- * TODO: Add JSDoc comment.
+ * Prettier configuration.
  */
 export default mergeConfig(core, {
   overrides: [

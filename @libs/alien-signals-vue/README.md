@@ -75,9 +75,9 @@ const count = useSignal($count);
 
 The following features and support will be added sequentially:
 
-- [ ] SSR verification and support
+- [ ] Documentation and solutions for handling SSR hydration errors
 - [ ] Enhancement of test coverage
-- [ ] Creation of Astro framework usage examples
+- [x] Creation of Astro framework usage examples
 
 <br />
 

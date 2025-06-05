@@ -1,6 +1,10 @@
 id: '@libs/alien-signals-solid'
 type: 'library'
 stack: 'frontend'
+tags:
+  - 'eslint'
+  - 'prettier'
+  - 'typescript'
 
 project:
   description: 'The alien-signals for Solid.'

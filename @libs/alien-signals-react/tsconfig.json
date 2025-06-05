@@ -1,5 +1,8 @@
 {
   "extends": "@packages-config/typescript/configs/react.json",
+  "compilerOptions": {
+    "outDir": "../../.moon/cache/types/@libs/alien-signals-react"
+  },
   "references": [
     {
       "path": "../../@packages/codebase/eslint"
