@@ -1,7 +1,7 @@
 {
   "name": "@gn8/alien-signals-react",
   "description": "The alien-signals for React.",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "private": false,
   "publishConfig": {
     "provenance": true
