@@ -1,5 +1,6 @@
 import react from '@astrojs/react';
 import solid from '@astrojs/solid-js';
+import svelte from '@astrojs/svelte';
 import vue from '@astrojs/vue';
 import { defineConfig } from 'astro/config';
 
@@ -22,5 +23,10 @@ export default defineConfig({
      * @see {@link https://docs.astro.build/guides/integrations-guide/vue | Astro Vue Integration}
      */
     vue(),
+
+    /**
+     * @see {@link https://docs.astro.build/guides/integrations-guide/svelte | Astro Svelte Integration}
+     */
+    svelte(),
   ],
 });

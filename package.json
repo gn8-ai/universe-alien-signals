@@ -6,13 +6,12 @@
   ],
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",
-    "@changesets/cli": "^2.29.4",
+    "@changesets/cli": "^2.29.5",
     "@packages-codebase/eslint": "workspace:*",
     "@packages-codebase/prettier": "workspace:*",
     "@packages-config/typescript": "workspace:*",
-    "npm-check-updates": "^18.0.1",
-    "eslint": "^9.28.0",
-    "prettier": "^3.5.3",
+    "eslint": "^9.31.0",
+    "prettier": "^3.6.2",
     "typescript": "^5.8.3"
   }
 }

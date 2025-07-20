@@ -11,6 +11,9 @@
       "path": "../../@libs/alien-signals-solid"
     },
     {
+      "path": "../../@libs/alien-signals-svelte"
+    },
+    {
       "path": "../../@libs/alien-signals-vue"
     },
     {

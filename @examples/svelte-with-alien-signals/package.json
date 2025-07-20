@@ -1,0 +1,20 @@
+{
+  "name": "svelte-with-alien-signals",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@gn8/alien-signals-svelte": "workspace:*",
+    "svelte": "^5.36.10"
+  },
+  "devDependencies": {
+    "@packages-codebase/eslint": "workspace:*",
+    "@packages-codebase/prettier": "workspace:*",
+    "@packages-config/typescript": "workspace:*",
+    "@sveltejs/vite-plugin-svelte": "^6.1.0",
+    "@tsconfig/svelte": "^5.0.4",
+    "svelte-check": "^4.3.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.5"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "@gn8/alien-signals-solid",
   "description": "The alien-signals for Solid.",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "private": false,
   "publishConfig": {
     "provenance": true
@@ -38,15 +38,15 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.27.4",
-    "@happy-dom/global-registrator": "^17.6.3",
+    "@babel/core": "^7.28.0",
+    "@happy-dom/global-registrator": "^18.0.1",
     "@packages-codebase/eslint": "workspace:*",
     "@packages-codebase/prettier": "workspace:*",
     "@packages-config/typescript": "workspace:*",
     "@solidjs/testing-library": "^0.8.10",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
-    "@types/bun": "^1.2.15",
+    "@types/bun": "^1.2.19",
     "babel-preset-solid": "^1.9.6",
     "tsup": "^8.5.0"
   }

@@ -29,6 +29,7 @@ tasks:
     deps:
       - '@libs/alien-signals-react:build'
       - '@libs/alien-signals-solid:build'
+      - '@libs/alien-signals-svelte:build'
       - '@libs/alien-signals-vue:build'
 
   ##########

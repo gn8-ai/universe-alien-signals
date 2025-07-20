@@ -20,16 +20,16 @@ A library that enables the use of the [alien-signals](https://github.com/stackbl
 
 ## 🔌 Status
 
-| Framework | Status | SSR Support | Repo                         |
-| --------- | ------ | ----------- | ---------------------------- |
-| React     | ✅     | ⚠️          | [🔗](../alien-signals-react) |
-| Solid     | ✅     | ⚠️          | [🔗](../alien-signals-solid) |
-| Vue       | ✅     | ⚠️          | [🔗](../alien-signals-vue)   |
-| Svelte    | 🛑     | ⚠️          | ⌛️                           |
+| Framework | Status | SSR Support | Repo                          |
+| --------- | ------ | ----------- | ----------------------------- |
+| React     | ✅     | 🔼          | [🔗](../alien-signals-react)  |
+| Solid     | ✅     | 🔼          | [🔗](../alien-signals-solid)  |
+| Vue       | ✅     | 🔼          | [🔗](../alien-signals-vue)    |
+| Svelte    | ✅     | 🔼          | [🔗](../alien-signals-svelte) |
 
 - ✅: Implemented
-- 🛑: Not Implemented
-- ⚠️: Not Verified
+- 🔼: Avoidable
+- ⚠️: Unverified
 - ⌛️: Coming Soon
 
 <br />
@@ -50,9 +50,9 @@ npm install alien-signals @gn8/alien-signals-vue
 import { useSignal } from '@gn8/alien-signals-vue';
 import { signal } from 'alien-signals';
 
-const $count = signal(0);
+const countSignal = signal(0);
 
-const count = useSignal($count);
+const count = useSignal(countSignal);
 </script>
 
 <template>

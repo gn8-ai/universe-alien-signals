@@ -28,7 +28,7 @@
 | Svelte    | 🛑     | ⚠️          | ⌛️                           |
 
 - ✅: 実装済み
-- 🛑: 未実装
+- 🔼: 回避可能
 - ⚠️: 未検証
 - ⌛️: 準備中
 
@@ -50,9 +50,9 @@ npm install alien-signals @gn8/alien-signals-vue
 import { useSignal } from '@gn8/alien-signals-vue';
 import { signal } from 'alien-signals';
 
-const $count = signal(0);
+const countSignal = signal(0);
 
-const count = useSignal($count);
+const count = useSignal(countSignal);
 </script>
 
 <template>

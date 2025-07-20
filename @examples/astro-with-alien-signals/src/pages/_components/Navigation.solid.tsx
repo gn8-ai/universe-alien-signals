@@ -2,6 +2,7 @@
 
 import reactSvg from '../_assets/react.svg';
 import solidSvg from '../_assets/solid.svg';
+import svelteSvg from '../_assets/svelte.svg';
 import vueSvg from '../_assets/vue.svg';
 import styles from './Navigation.module.css';
 
@@ -21,6 +22,9 @@ export default function Navigation() {
       </a>
       <a href="/vue" class="logo-link">
         <img src={vueSvg.src} alt="Vue" class="logo vue" />
+      </a>
+      <a href="/svelte" class="logo-link">
+        <img src={svelteSvg.src} alt="Svelte" class="logo svelte" />
       </a>
     </nav>
   );

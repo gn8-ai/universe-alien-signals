@@ -1,7 +1,7 @@
 /** @jsxImportSource solid-js */
 
 import { useSignal } from '@gn8/alien-signals-solid';
-import { $counter } from '../../_signals/counter';
+import { counterSignal } from '../../_signals/counter';
 
 /**
  * Solid Counter component.
@@ -9,7 +9,7 @@ import { $counter } from '../../_signals/counter';
  * @jsx
  */
 export default function SolidCounter() {
-  const [count, setCount] = useSignal($counter);
+  const [count, setCount] = useSignal(counterSignal);
 
   return (
     <button onClick={() => setCount(count() + 1)}>

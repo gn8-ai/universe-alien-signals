@@ -5,12 +5,12 @@ import { signal } from 'alien-signals';
 /**
  * Count signal.
  */
-const $count = signal(0);
+const countSignal = signal(0);
 
 /**
  * Count vue signal.
  */
-const count = useSignal($count);
+const count = useSignal(countSignal);
 </script>
 
 <template>

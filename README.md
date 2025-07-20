@@ -19,17 +19,16 @@ A library that enables simple use of the [alien-signals](https://github.com/stac
 
 ## 🔌 Status
 
-| Framework | Status | SSR Support | Usage        | Repo                              |
-| --------- | ------ | ----------- | ------------ | --------------------------------- |
-| React     | ✅     | 🔼          | [🔗](#react) | [🔗](./@libs/alien-signals-react) |
-| Solid     | ✅     | 🔼          | [🔗](#solid) | [🔗](./@libs/alien-signals-solid) |
-| Vue       | ✅     | 🔼          | [🔗](#vue)   | [🔗](./@libs/alien-signals-vue)   |
-| Svelte    | ⌛️     | ⌛️          | ⌛️           | ⌛️                                |
+| Framework | Status | SSR Support | Usage         | Repo                               |
+| --------- | ------ | ----------- | ------------- | ---------------------------------- |
+| React     | ✅     | 🔼          | [🔗](#react)  | [🔗](./@libs/alien-signals-react)  |
+| Solid     | ✅     | 🔼          | [🔗](#solid)  | [🔗](./@libs/alien-signals-solid)  |
+| Vue       | ✅     | 🔼          | [🔗](#vue)    | [🔗](./@libs/alien-signals-vue)    |
+| Svelte    | ✅     | 🔼          | [🔗](#svelte) | [🔗](./@libs/alien-signals-svelte) |
 
 - ✅: Implemented
 - 🔼: Avoidable
-- 🛑: Not Implemented
-- ⚠️: Not Verified
+- ⚠️: Unverified
 - ⌛️: Coming Soon
 
 <br />
@@ -51,10 +50,10 @@ npm install alien-signals @gn8/alien-signals-react
 import { useSignal } from '@gn8/alien-signals-react';
 import { signal } from 'alien-signals';
 
-const $count = signal(0);
+const countSignal = signal(0);
 
 export default function Counter() {
-  const [count, setCount] = useSignal($count);
+  const [count, setCount] = useSignal(countSignal);
 
   return (
     <button onClick={() => setCount(count + 1)}>
@@ -81,10 +80,10 @@ npm install alien-signals @gn8/alien-signals-solid
 import { useSignal } from '@gn8/alien-signals-solid';
 import { signal } from 'alien-signals';
 
-const $count = signal(0);
+const countSignal = signal(0);
 
 export default function Counter() {
-  const [count, setCount] = useSignal($count);
+  const [count, setCount] = useSignal(countSignal);
 
   return (
     <button onClick={() => setCount(count() + 1)}>
@@ -112,9 +111,9 @@ npm install alien-signals @gn8/alien-signals-vue
 import { useSignal } from '@gn8/alien-signals-vue';
 import { signal } from 'alien-signals';
 
-const $count = signal(0);
+const countSignal = signal(0);
 
-const count = useSignal($count);
+const count = useSignal(countSignal);
 </script>
 
 <template>
@@ -126,13 +125,41 @@ const count = useSignal($count);
 
 <br />
 
+### Svelte
+
+#### Installation
+
+```sh
+npm install alien-signals @gn8/alien-signals-svelte
+```
+
+#### Sample Code
+
+<!-- prettier-ignore -->
+```svelte
+<script>
+  import { useSignal } from '@gn8/alien-signals-svelte';
+  import { signal } from 'alien-signals';
+
+  const countSignal = signal(0);
+
+  const count = useSignal(countSignal);
+</script>
+
+<button on:click={() => $count++}>
+  count is {$count}
+</button>
+```
+
+<br />
+
 ## 📚 Roadmap
 
 The following features and support will be added sequentially:
 
 - [ ] Documentation and solutions for handling SSR hydration errors
 - [ ] Enhancement of test coverage
-- [ ] Implementation of `@gn8/alien-signals-svelte`
+- [x] Implementation of `@gn8/alien-signals-svelte`
 - [x] Creation of Astro framework usage examples
 
 <br />

@@ -1,7 +1,7 @@
 /** @jsxImportSource react */
 
 import { useSignal } from '@gn8/alien-signals-react';
-import { $counter } from '../../_signals/counter';
+import { counterSignal } from '../../_signals/counter';
 
 /**
  * React Counter component.
@@ -9,7 +9,7 @@ import { $counter } from '../../_signals/counter';
  * @jsx
  */
 export default function ReactCounter() {
-  const [count, setCount] = useSignal($counter);
+  const [count, setCount] = useSignal(counterSignal);
 
   return (
     <button onClick={() => setCount(count + 1)}>
