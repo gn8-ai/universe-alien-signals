@@ -1,18 +1,22 @@
-<script>
+<script lang="ts">
+  import { signal as createSignal } from 'alien-signals';
   import { useSignal } from './use-signal';
 
-  export let signal;
+  interface Props {
+    signal: ReturnType<typeof createSignal<number>>;
+  }
+
+  let { signal }: Props = $props();
   
-  // React to signal prop changes
-  $: count = useSignal(signal);
+  const count = useSignal(signal);
   
   function handleClick() {
-    count.value++;
+    count.update(n => n + 1);
   }
 </script>
 
-<div>Count: {$count}</div>
+<div data-testid="count">Count: {$count}</div>
 
-<button onclick={handleClick}>
+<button data-testid="increment-button" onclick={handleClick}>
   Increment
 </button>

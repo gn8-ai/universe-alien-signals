@@ -81,10 +81,10 @@ export function useSignalSetter<T>(signal: WritableSignal<T>) {
  * import { useSignal } from '@gn8/alien-signals-react';
  * import { signal } from 'alien-signals';
  *
- * const $count = signal(0);
+ * const countSignal = signal(0);
  *
  * function Counter() {
- *   const [count, setCount] = useSignal($count);
+ *   const [count, setCount] = useSignal(countSignal);
  *
  *   return (
  *     <button onClick={() => setCount(count + 1)}>
