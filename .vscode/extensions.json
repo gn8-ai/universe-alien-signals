@@ -2,17 +2,26 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "recommendations": [
     "PKief.material-icon-theme",
+    "Vue.volar",
+    "astro-build.astro-vscode",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "moonrepo.moon-console",
+    "solidjs-community.solid-ide",
     "streetsidesoftware.code-spell-checker",
-    "stylelint.vscode-stylelint"
+    "stylelint.vscode-stylelint",
+    "svelte.svelte-vscode"
   ],
   "requiredRecommendations": [
+    "Vue.volar",
+    "astro-build.astro-vscode",
     "dbaeumer.vscode-eslint",
+    "moonrepo.moon-console",
     "esbenp.prettier-vscode",
+    "solidjs-community.solid-ide",
     "streetsidesoftware.code-spell-checker",
-    "stylelint.vscode-stylelint"
+    "stylelint.vscode-stylelint",
+    "svelte.svelte-vscode"
   ],
   "unwantedRecommendations": []
 }

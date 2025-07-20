@@ -56,11 +56,25 @@ tasks:
   ##################
 
   dependencies-check:
-    command: 'ncu --root --workspaces'
+    command: 'bunx npm-check-updates --root --workspaces'
     options:
       cache: false
 
   dependencies-update:
-    command: 'ncu --root --workspaces -u'
+    command: 'bunx npm-check-updates --root --workspaces -u'
+    options:
+      cache: false
+
+  ###########
+  ## Clear ##
+  ###########
+
+  clear-node-modules:
+    command: 'bunx rimraf "**/node_modules"'
+    options:
+      cache: false
+
+  clear-gitignore-target-files:
+    command: 'git clean -xdf'
     options:
       cache: false
