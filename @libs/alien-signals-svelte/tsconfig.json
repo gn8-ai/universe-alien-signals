@@ -1,0 +1,17 @@
+{
+  "extends": "../../@packages/config/typescript/src/configs/svelte.json",
+  "compilerOptions": {
+    "outDir": "../../.moon/cache/types/@libs/alien-signals-svelte"
+  },
+  "references": [
+    {
+      "path": "../../@packages/codebase/eslint"
+    },
+    {
+      "path": "../../@packages/codebase/prettier"
+    },
+    {
+      "path": "../../@packages/config/typescript"
+    }
+  ]
+}
