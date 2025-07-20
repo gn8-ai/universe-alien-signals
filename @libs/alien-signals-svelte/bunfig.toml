@@ -1,0 +1,6 @@
+[test]
+preload = [
+  "./test/svelte-plugin.ts",
+  "./test/happydom.ts",
+  "./test/testing-library.ts",
+]

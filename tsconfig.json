@@ -14,6 +14,9 @@
       "path": "@examples/solid-with-alien-signals"
     },
     {
+      "path": "@examples/svelte-with-alien-signals"
+    },
+    {
       "path": "@examples/vue-with-alien-signals"
     },
     {
@@ -21,6 +24,9 @@
     },
     {
       "path": "@libs/alien-signals-solid"
+    },
+    {
+      "path": "@libs/alien-signals-svelte"
     },
     {
       "path": "@libs/alien-signals-vue"

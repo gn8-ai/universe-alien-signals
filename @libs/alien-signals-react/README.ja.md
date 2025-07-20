@@ -20,15 +20,15 @@
 
 ## 🔌 ステータス
 
-| Framework | Status | SSR Support | Repo                         |
-| --------- | ------ | ----------- | ---------------------------- |
-| React     | ✅     | ⚠️          | [🔗](../alien-signals-react) |
-| Solid     | ✅     | ⚠️          | [🔗](../alien-signals-solid) |
-| Vue       | ✅     | ⚠️          | [🔗](../alien-signals-vue)   |
-| Svelte    | 🛑     | ⚠️          | ⌛️                           |
+| Framework | Status | SSR Support | Repo                          |
+| --------- | ------ | ----------- | ----------------------------- |
+| React     | ✅     | 🔼          | [🔗](../alien-signals-react)  |
+| Solid     | ✅     | 🔼          | [🔗](../alien-signals-solid)  |
+| Vue       | ✅     | 🔼          | [🔗](../alien-signals-vue)    |
+| Svelte    | ✅     | 🔼          | [🔗](../alien-signals-svelte) |
 
 - ✅: 実装済み
-- 🛑: 未実装
+- 🔼: 回避可能
 - ⚠️: 未検証
 - ⌛️: 準備中
 
@@ -49,10 +49,10 @@ npm install alien-signals @gn8/alien-signals-react
 import { useSignal } from '@gn8/alien-signals-react';
 import { signal } from 'alien-signals';
 
-const $count = signal(0);
+const countSignal = signal(0);
 
 export default function Counter() {
-  const [count, setCount] = useSignal($count);
+  const [count, setCount] = useSignal(countSignal);
 
   return (
     <button onClick={() => setCount(count + 1)}>

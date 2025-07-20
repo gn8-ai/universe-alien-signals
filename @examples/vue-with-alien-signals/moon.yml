@@ -21,8 +21,10 @@ tasks:
   #################
 
   dev:
-    command: 'vite dev --port 4324'
+    command: 'vite dev --port 4325'
     preset: 'server'
+    deps:
+      - '@libs/alien-signals-vue:build'
 
   ##########
   ## Lint ##

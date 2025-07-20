@@ -20,16 +20,16 @@ A library that enables the use of the [alien-signals](https://github.com/stackbl
 
 ## 🔌 Status
 
-| Framework | Status | SSR Support | Repo                         |
-| --------- | ------ | ----------- | ---------------------------- |
-| React     | ✅     | ⚠️          | [🔗](../alien-signals-react) |
-| Solid     | ✅     | ⚠️          | [🔗](../alien-signals-solid) |
-| Vue       | ✅     | ⚠️          | [🔗](../alien-signals-vue)   |
-| Svelte    | 🛑     | ⚠️          | ⌛️                           |
+| Framework | Status | SSR Support | Repo                          |
+| --------- | ------ | ----------- | ----------------------------- |
+| React     | ✅     | 🔼          | [🔗](../alien-signals-react)  |
+| Solid     | ✅     | 🔼          | [🔗](../alien-signals-solid)  |
+| Vue       | ✅     | 🔼          | [🔗](../alien-signals-vue)    |
+| Svelte    | ✅     | 🔼          | [🔗](../alien-signals-svelte) |
 
 - ✅: Implemented
-- 🛑: Not Implemented
-- ⚠️: Not Verified
+- 🔼: Avoidable
+- ⚠️: Unverified
 - ⌛️: Coming Soon
 
 <br />
@@ -49,10 +49,10 @@ npm install alien-signals @gn8/alien-signals-react
 import { useSignal } from '@gn8/alien-signals-react';
 import { signal } from 'alien-signals';
 
-const $count = signal(0);
+const countSignal = signal(0);
 
 export default function Counter() {
-  const [count, setCount] = useSignal($count);
+  const [count, setCount] = useSignal(countSignal);
 
   return (
     <button onClick={() => setCount(count + 1)}>

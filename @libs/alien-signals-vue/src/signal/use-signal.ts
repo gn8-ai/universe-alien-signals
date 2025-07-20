@@ -24,9 +24,9 @@ type WritableSignal<T> = ReturnType<typeof signal<T>>;
  *  import { useSignal } from '@gn8/alien-signals-vue';
  *  import { signal } from 'alien-signals';
  *
- *  const $count = signal(0);
+ *  const countSignal = signal(0);
  *
- *  const count = useSignal($count);
+ *  const count = useSignal(countSignal);
  * </script>
  *
  * <template>

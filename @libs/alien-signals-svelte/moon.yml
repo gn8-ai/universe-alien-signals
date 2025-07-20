@@ -1,0 +1,44 @@
+id: '@libs/alien-signals-svelte'
+type: 'library'
+stack: 'frontend'
+tags:
+  - 'eslint'
+  - 'prettier'
+  - 'typescript'
+
+project:
+  description: 'The alien-signals for Svelte.'
+
+dependsOn:
+  - { id: '@packages-codebase/eslint', scope: 'development' }
+  - { id: '@packages-codebase/prettier', scope: 'development' }
+  - { id: '@packages-config/typescript', scope: 'development' }
+
+tasks:
+  ###########
+  ## Build ##
+  ###########
+
+  build:
+    command: 'tsup'
+    inputs:
+      - 'src/**/*'
+      - 'tsup.config.ts'
+      - 'tsconfig.build.json'
+    outputs:
+      - 'dist'
+    options:
+      runInCI: true
+
+  ###########
+  ## Tests ##
+  ###########
+
+  test:
+    command: 'bun test --conditions browser'
+    inputs:
+      - 'test/**/*'
+      - 'src/**/*.test.*'
+      - 'bunfig.toml'
+    options:
+      runInCI: true

@@ -24,13 +24,12 @@
 | React     | ✅     | 🔼          | [🔗](#react) | [🔗](./@libs/alien-signals-react) |
 | Solid     | ✅     | 🔼          | [🔗](#solid) | [🔗](./@libs/alien-signals-solid) |
 | Vue       | ✅     | 🔼          | [🔗](#vue)   | [🔗](./@libs/alien-signals-vue)   |
-| Svelte    | ⌛️     | 🔼          | ⌛️           | ⌛️                                |
+| Svelte    | ✅     | 🔼          | [🔗](#svelte) | [🔗](./@libs/alien-signals-svelte) |
 
-- ✅ : 実装済み
-- 🔼 : 回避可能
-- 🛑 : 未実装
-- ⚠️ : 未検証
-- ⌛️ : 準備中
+- ✅: 実装済み
+- 🔼: 回避可能
+- ⚠️: 未検証
+- ⌛️: 準備中
 
 <br />
 
@@ -51,10 +50,10 @@ npm install alien-signals @gn8/alien-signals-react
 import { useSignal } from '@gn8/alien-signals-react';
 import { signal } from 'alien-signals';
 
-const $count = signal(0);
+const countSignal = signal(0);
 
 export default function Counter() {
-  const [count, setCount] = useSignal($count);
+  const [count, setCount] = useSignal(countSignal);
 
   return (
     <button onClick={() => setCount(count + 1)}>
@@ -81,10 +80,10 @@ npm install alien-signals @gn8/alien-signals-solid
 import { useSignal } from '@gn8/alien-signals-solid';
 import { signal } from 'alien-signals';
 
-const $count = signal(0);
+const countSignal = signal(0);
 
 export default function Counter() {
-  const [count, setCount] = useSignal($count);
+  const [count, setCount] = useSignal(countSignal);
 
   return (
     <button onClick={() => setCount(count() + 1)}>
@@ -112,9 +111,9 @@ npm install alien-signals @gn8/alien-signals-vue
 import { useSignal } from '@gn8/alien-signals-vue';
 import { signal } from 'alien-signals';
 
-const $count = signal(0);
+const countSignal = signal(0);
 
-const count = useSignal($count);
+const count = useSignal(countSignal);
 </script>
 
 <template>
@@ -126,13 +125,41 @@ const count = useSignal($count);
 
 <br />
 
+### Svelte
+
+#### インストール
+
+```sh
+npm install alien-signals @gn8/alien-signals-svelte
+```
+
+#### サンプルコード
+
+<!-- prettier-ignore -->
+```svelte
+<script>
+  import { useSignal } from '@gn8/alien-signals-svelte';
+  import { signal } from 'alien-signals';
+
+  const countSignal = signal(0);
+
+  const count = useSignal(countSignal);
+</script>
+
+<button on:click={() => $count++}>
+  count is {$count}
+</button>
+```
+
+<br />
+
 ## 📚 ロードマップ
 
 以下の機能やサポートを順次追加していく予定です。
 
 - [ ] SSR ハイドレーション時のエラー回避方法の検証とドキュメント化
 - [ ] テストコードの拡充
-- [ ] `@gn8/alien-signals-svelte` の実装
+- [x] `@gn8/alien-signals-svelte` の実装
 - [x] Astro フレームワークの使用例作成
 
 <br />

@@ -6,7 +6,7 @@ import { signal } from 'alien-signals';
 /**
  * Count signal.
  */
-const $count = signal(0);
+const countSignal = signal(0);
 
 /**
  * Top page component.
@@ -14,7 +14,7 @@ const $count = signal(0);
  * @jsx
  */
 export default function App() {
-  const [count, setCount] = useSignal($count);
+  const [count, setCount] = useSignal(countSignal);
 
   return (
     <>

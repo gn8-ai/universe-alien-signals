@@ -11,19 +11,16 @@
   <br />
 
   ## Package Dependency Updates
-
   - Updated `alien-signals` dependency version from `>=1.0.0` to `>=2.0.0`
 
   <br />
 
   ## Development Dependencies Update
-
   - Updated various development tools to their latest versions
 
   <br />
 
   ## Package Structure Improvements
-
   - Added `files` field to all packages
     ```json
     "files": [
@@ -38,7 +35,6 @@
   <br />
 
   ## Version Management
-
   - Updated all packages to version `0.1.0`
   - Managed changes as a minor version update
 
@@ -53,7 +49,6 @@
   <br />
 
   ## The moonrepo optimization
-
   - Task management improvements
     - Implementation of tag-based task opt-in functionality
     - Optional task configuration
@@ -70,7 +65,6 @@
   <br />
 
   ## Test environment improvements
-
   - Test case optimization
     - Async process improvements (using act())
     - DOM library reference addition
@@ -78,14 +72,12 @@
   <br />
 
   ## Astro Example updates
-
   - Removal of experimental SVG feature
   - Configuration optimization
 
   <br />
 
   ## Documentation updates
-
   - SSR support status updates
     - SSR compatibility status for each framework
   - Framework-specific Example implementation status
@@ -94,7 +86,6 @@
   <br />
 
   ## Development environment setup
-
   - ESLint configuration updates
     - Rule optimization
     - Plugin updates
@@ -108,7 +99,6 @@
   <br />
 
   ## Dependency management improvements
-
   - Dependency checking with ncu
   - Automatic update functionality addition
 
