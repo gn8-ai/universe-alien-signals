@@ -23,6 +23,8 @@ tasks:
   dev:
     command: 'vite dev --port 4322'
     preset: 'server'
+    deps:
+      - '@libs/alien-signals-react:build'
 
   ##########
   ## Lint ##
