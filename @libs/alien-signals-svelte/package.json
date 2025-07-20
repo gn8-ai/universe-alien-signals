@@ -39,15 +39,15 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@happy-dom/global-registrator": "^17.6.3",
+    "@happy-dom/global-registrator": "^18.0.1",
     "@packages-codebase/eslint": "workspace:*",
     "@packages-codebase/prettier": "workspace:*",
     "@packages-config/typescript": "workspace:*",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/svelte": "^5.0.0",
-    "@types/bun": "^1.2.15",
-    "svelte": "^5.0.0",
+    "@testing-library/svelte": "^5.2.8",
+    "@types/bun": "^1.2.19",
+    "svelte": "^5.36.10",
     "tsup": "^8.5.0"
   }
 }

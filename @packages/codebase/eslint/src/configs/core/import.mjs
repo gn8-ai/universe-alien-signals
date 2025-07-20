@@ -1,4 +1,3 @@
-// @ts-expect-error: No declaration file.
 import importPlugin from 'eslint-plugin-import';
 import perfectionistPlugin from 'eslint-plugin-perfectionist';
 import typescriptEslint from 'typescript-eslint';
@@ -20,7 +19,6 @@ export default typescriptEslint.config(
       'import/resolver': { typescript: true },
     },
     plugins: {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       import: importPlugin,
     },
     rules: {

@@ -8,6 +8,9 @@ import { defineConfig } from 'vite';
  */
 export default defineConfig({
   plugins: [
+    /**
+     * @see {@link https://github.com/sveltejs/vite-plugin-svelte#readme | Svelte Vite Plugin}
+     */
     // @ts-expect-error: Svelte plugin is not supported by the latest version of Vite
     svelte(),
   ],
