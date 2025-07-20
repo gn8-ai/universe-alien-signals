@@ -1,0 +1,37 @@
+id: '@examples/svelte-with-alien-signals'
+type: 'application'
+stack: 'frontend'
+tags:
+  - 'eslint'
+  - 'prettier'
+  - 'typescript'
+
+project:
+  description: 'Svelte with alien-signals example.'
+
+dependsOn:
+  - { id: '@libs/alien-signals-svelte' }
+  - { id: '@packages-codebase/eslint', scope: 'development' }
+  - { id: '@packages-codebase/prettier', scope: 'development' }
+  - { id: '@packages-config/typescript', scope: 'development' }
+
+tasks:
+  #################
+  ## Development ##
+  #################
+
+  dev:
+    command: 'vite dev --port 4324'
+    preset: 'server'
+    deps:
+      - '@libs/alien-signals-svelte:build'
+
+  ##########
+  ## Lint ##
+  ##########
+
+  lint-setup:
+    deps:
+      - '@libs/alien-signals-svelte:build'
+    options:
+      runInCI: true

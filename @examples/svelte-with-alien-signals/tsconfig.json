@@ -1,0 +1,21 @@
+{
+  "extends": "@packages-config/typescript/configs/svelte.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "outDir": "../../.moon/cache/types/@examples/svelte-with-alien-signals"
+  },
+  "references": [
+    {
+      "path": "../../@libs/alien-signals-svelte"
+    },
+    {
+      "path": "../../@packages/codebase/eslint"
+    },
+    {
+      "path": "../../@packages/codebase/prettier"
+    },
+    {
+      "path": "../../@packages/config/typescript"
+    }
+  ]
+}
