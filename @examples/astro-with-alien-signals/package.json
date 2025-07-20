@@ -6,15 +6,18 @@
   "dependencies": {
     "@astrojs/react": "^4.3.0",
     "@astrojs/solid-js": "^5.1.0",
+    "@astrojs/svelte": "^7.1.0",
     "@astrojs/vue": "^5.1.0",
     "@gn8/alien-signals-react": "workspace:*",
     "@gn8/alien-signals-solid": "workspace:*",
+    "@gn8/alien-signals-svelte": "workspace:*",
     "@gn8/alien-signals-vue": "workspace:*",
     "alien-signals": "^2.0.5",
     "astro": "^5.8.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "solid-js": "^1.9.7",
+    "svelte": "^5.22.7",
     "vue": "^3.5.16"
   },
   "devDependencies": {

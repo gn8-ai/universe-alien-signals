@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { $counter } from '../../_signals/counter';
 import { useSignal } from '@gn8/alien-signals-vue';
+import { counterSignal } from '../../_signals/counter';
 
-const count = useSignal($counter);
+const counter = useSignal(counterSignal);
 </script>
 
 <template>
-  <button @click="count++">
-    <span data-allow-mismatch>count is {{ count }}</span>
+  <button @click="counter++">
+    <span data-allow-mismatch>count is {{ counter }}</span>
   </button>
 </template>

@@ -1,0 +1,26 @@
+---
+import SvelteLogo from '../_assets/svelte.svg';
+import Navigation from '../_components/Navigation.solid';
+import Layout from '../../layouts/Layout.astro';
+import SvelteCounter from './_components/SvelteCounter.svelte';
+---
+
+<Layout>
+  <div>
+    <a class="logo-link" href="https://svelte.dev" target="_blank">
+      <img class="logo svelte" alt="Svelte logo" src={SvelteLogo.src} />
+    </a>
+  </div>
+  <h1>Svelte</h1>
+  <Navigation />
+  <div class="card">
+    <SvelteCounter client:load />
+    <p>
+      Edit <code>src/pages/svelte/index.astro</code> and save to test HMR
+    </p>
+  </div>
+  <p class="read-the-docs">Click on the Svelte logo to learn more</p>
+  <p>
+    <a href="/">Back to Astro</a>
+  </p>
+</Layout>
