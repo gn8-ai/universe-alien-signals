@@ -1,6 +1,6 @@
 # @gn8/alien-signals-svelte
 
-## 0.1.0
+## 0.1.1
 
 ### Minor Changes
 
