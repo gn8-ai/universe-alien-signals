@@ -1,7 +1,7 @@
 {
   "name": "@gn8/alien-signals-vue",
   "description": "The alien-signals for Vue.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "publishConfig": {
     "provenance": true
